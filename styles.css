@@ -1,0 +1,228 @@
+.content_container
+{
+	color:#F7DEC5;
+	//padding:0px 100px 100px 20px;
+	border: 2px solid black;
+	//margin:0px 50px 10px 50px;
+	margin:10px;
+}
+.productcontent_container
+{
+	font-family:Helvetica, Arial, sans-serif;
+	border: 2px solid black;
+	margin:0px 50px 0px 0px;
+	color:#fff;
+	font-size:16pt;
+}
+.levelTitle
+{
+	font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1.2381em;
+    padding-top: 0.6190em;
+    padding-bottom: 0;
+}
+.shoppingcart_container
+{
+	//position:fixed;
+	//margin-right:0px;
+	right:10px;
+	width:120px;
+	border: 2px solid black;
+	padding:10px;
+}
+/* категории товаров */
+.category
+{
+	font-family:Helvetica, Arial, sans-serif;
+	border: 4px dotted green;
+	margin:0px 50px 0px 0px;
+	//color:#fff;
+	//font-size:16pt;
+	//cursor:pointer;
+}
+.category_container
+{
+	font-family:Helvetica, Arial, sans-serif;
+	border: 2px solid black;
+	margin:0px 50px 0px 0px;
+	color:#fff;
+	font-size:16pt;
+	cursor:pointer;
+}
+.category_container_child
+{
+	display:inline-block;
+	font-family:Helvetica, Arial, sans-serif;
+	border: 2px solid black;
+	margin:0px 50px 0px 0px;
+	color:black;
+	font-size:16pt;
+}
+.category_container_child:hover
+{
+	font-family:Helvetica, Arial, sans-serif;
+	border: 2px solid black;
+	margin:0px 50px 0px 0px;
+	color:#fff;
+	font-size:16pt;
+	background:gray;
+}
+.category_container_child:active
+{
+	top: 1px;
+}
+.good_container
+{
+	display:inline-block;
+	background:url(http://culture-club.ru/teatime/images/q6Z5LQ4LWVo.jpg);
+	height:390px;
+	width:200px;
+	border: 2px solid black;
+	//background:#05B6DE;
+	margin:10px;
+}
+.good_mainphoto
+{
+	height:150px;
+	width:150px;
+	border: 1px solid black;
+	margin:20px;
+}
+.good_name
+{
+	width:200px;
+	height:40px;
+	border: 1px solid black;
+}
+.good_price
+{
+	width:200px;
+	height:30px;
+	border: 1px solid black;
+}
+.inputQuantity
+{
+	width:3em;
+}
+.leastDiv
+{
+	position:relative;
+	margin:5px 33px;
+}
+/* GlassButton */
+.buttonBuy {
+left:17%;
+cursor:pointer;
+  position: relative;
+  display: inline-block;
+  color: #777674;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 3px / 100%;
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+}
+.buttonBuy:hover {
+  transition: .5s linear;
+  background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+.buttonBuy:active {
+  top: 1px;
+}
+.minusBtn
+{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  outline: none;
+  background: #ddd;
+  box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+}
+.minusBtn:hover, .minusBtn:focus
+{
+  background: #e35d31;
+  box-shadow: none;
+  cursor:pointer;
+}
+.minusBtn:after, .minusBtn:before
+{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  background: #999;
+}
+.minusBtn:hover:after, .minusBtn:hover:before
+{
+  background: #fff;
+  box-shadow: none;
+}
+.plusBtn
+{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  outline: none;
+  background: #ddd;
+  box-shadow: 0 1px rgba(0,0,0,.1) inset, 0 1px #fff;
+  cursor:pointer;
+}
+.plusBtn:after, .plusBtn:before
+{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+  height: 10%;
+  margin: auto;
+  background: #999;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.plusBtn:before
+{
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.plusBtn:hover, .plusBtn:focus {
+  background: #e35d31;
+  box-shadow: none;
+}
+.plusBtn:hover:after, .plusBtn:hover:before {
+  background: #fff;
+  box-shadow: none;
+}
+
+
+
