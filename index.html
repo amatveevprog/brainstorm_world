@@ -1,41 +1,17 @@
 <!DOCTYPE html>
 <meta charset="utf-8"/>
 <html>
-<head>
-  <title>brainstorm_world</title>
-
-  <link rel="stylesheet" href="styles.css">
-</head>
 
 <body>
-  <div id="greeting"></div>
+<style>
 
-  <script src="main.js"></script> 
-  <table width="100%">
+</style>
+<link rel="stylesheet" href="styles.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+ <script src="main.js"></script>
+<table width="100%">
 <tr>
-<td><div class="content_container">
-
-<div class="good_container">карточка товара
-<div class="good_mainphoto">основное фото</div>
-<div class="good_name">Название товара</div>
-<div class="good_price">Цена, руб</div>
-<div class="leastDiv"><div class="minusBtn"></div><input class="inputQuantity" type="text" value="1"><div class="plusBtn"></div></div>
-<div class="buttonBuy">Купить</div>
-</div>
-<div class="good_container">карточка товара
-<div class="good_mainphoto">основное фото</div>
-<div class="good_name">Название товара</div>
-<div class="good_price">Цена, руб</div>
-<div class="leastDiv"><div class="minusBtn"></div><input class="inputQuantity" type="text" value="1"><div class="plusBtn"></div></div>
-<div class="buttonBuy">Купить</div>
-</div>
-<div class="good_container">карточка товара
-<div class="good_mainphoto">основное фото</div>
-<div class="good_name">Название товара</div>
-<div class="good_price">Цена, руб</div>
-<div class="leastDiv"><div class="minusBtn"></div><input class="inputQuantity" type="text" value="1"><div class="plusBtn"></div></div>
-<div class="buttonBuy">Купить</div>
-</div>
+<td id="allproducts"><div class="content_container">
 
 </div>
 </td>
@@ -45,30 +21,15 @@
 <script>
 //tc.clearProductList();
 //tc.clearCategoryList(1);
-
-//tc.drawFirstLevel();исправить косяк с addEventListener!!!
+//tc.outPutAllTree();
+//tc.drawFirstLevel();//исправить косяк с addEventListener!!!
 //tc.outputAllProducts();
 
+var content={node:Node};
+var tc = new TeaShopCatalogCreator(content);
+tc.outPutAllTree();
+tc.RegisterEvents();
 </script>
-<p></p>
-<p></p>
-ПО ОТДЕЛЬНОСТИ:
-<p></p>
-<p></p>
-<div class="category">class: category<div style="border: 2px dotted green; font-size: 8pt;">____class: &lt;category&gt;</div></div>
-<p></p>
-<div class="levelTitle" category-level="1" style="border: 2px dashed blue;">LEVEL1<div style="border: 1px dashed blue; font-size: 10pt;">____class: &lt;levelTitle&gt;</div></div>
-<p></p>
-<div class="category_container" category-level="1"><div style="border: 1px dashed blue; font-size: 10pt; color: black;">____class: &lt;category_container&gt;</div><div class="category_container_child" category-level="1">огурец</div></div>
-<p></p>
-<div class="category_container_child" category-level="1">...Чай)<div style="border: 2px double black; font-size: 8pt;">____class: &lt;category_container_child&gt;</div></div>
-<p></p>
-<p></p>
-<div class="good_container">карточка товара
-<div class="good_mainphoto">основное фото</div>
-<div class="good_name">Название товара</div>
-<div class="good_price">Цена, руб</div>
-<div class="leastDiv"><div class="minusBtn"></div><input class="inputQuantity" type="text" value="1"><div class="plusBtn"></div></div>
-<div class="buttonBuy">Купить</div>
+
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 //конструктор класса Product
 //name - название продукта 
 //price - цена 
@@ -30,7 +31,7 @@ var glblId =
 
 ////поиск узла 
 //input_id - id элемента
-//cur - самый верхний узел(для рекурсии)
+//cur - самый верхний узел(для рекурсии) обычно самый верхний Node
 //_level - уровень(при вызове сюда ставить 0!) - тоже для рекурсии
 Product.prototype.searchNode = function(input_id,cur,_level)
 {
@@ -134,11 +135,79 @@ Node.addChild(Node.children[1],new Product("помидорЪ ближневос�
 Node.addChild(Node.children[2],new Product("Граната Ф-1",0,0,[]));
 Node.addChild(Node.children[0].children[0],new Product("огурец очень вкусный верхний",0,0,[]));
 Node.addChild(Node.children[2].children[0],new Product("Граната Ф-2",0,0,[]));
-Node.addChild(Node.children[2].children[0].children[0],new Product("Граната Ф-3",0,0,[]));
 Node.addChild(Node.children[1].children[0],new Product("помидорЪ ближневосточный1",0,0,[]));
 Node.addChild(Node.children[1].children[0].children[0],new Product("помидорЪ ближневосточный2",0,0,[]));
 Node.addChild(Node.children[1].children[0].children[0].children[0],new Product("помидорЪ ближневосточный3",0,0,[]));
-console.log(Node.maxLevel());
+
+Node.addChild(Node.children[3],new Product("АК-12",80000,0,["http://rostec.ru/img/interactives/4515998/img_ak.png"]));
+Node.addChild(Node.children[4],new Product("ПКП Печенег",80000,0,["http://mensby.com/images/stories/articles/2015/5581/upgraded-machinegun-pecheneg-sp-01.jpg"]));
+Node.addChild(Node.children[2].children[0].children[0],new Product("Граната Ф-3",0,0,["https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/F1_grenade_travmatik_com_02_by-sa.jpg/250px-F1_grenade_travmatik_com_02_by-sa.jpg"]));
+//console.log(Node.maxLevel());
+var glass = "аоуыэяёюие";
+var soglass = "йцкнгшщзхъфвпрлджчсмтьб";
+var alphabet = "абвгдеёжзиклмнопрстуфхцчшщъыьэюя";
+var cifr = "1234567890";
+var tea = "чай";
+var addOn = "c добавлением";
+function getRandomInt(min, max)
+{
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+for(var i=0;i<100;i++)
+{
+	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
+	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
+	var s3st = "";
+	var N = getRandomInt(0, 10);
+	for(var j = 0;j<N;j++)
+	{
+		s3st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+	}
+	if(getRandomInt(0, 1)==1)
+	{
+		var s4st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s4st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st+" "+addOn+" "+s4st+s3st+s2st+"ы";
+	}
+	else
+	{
+		var s5st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s5st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st;
+	}
+	var images = [
+		"http://s017.radikal.ru/i443/1510/bf/0c0f26da0574.jpg",
+		"http://s017.radikal.ru/i416/1510/81/3deca69a1630.jpg",
+		"http://s017.radikal.ru/i402/1510/cb/c98f4fdb1e0a.jpg",
+		"http://s017.radikal.ru/i427/1510/90/9130d4cbe465.jpg",
+		"http://s017.radikal.ru/i414/1510/16/adbb550264d8.jpg",
+		"http://s004.radikal.ru/i206/1510/36/825dbe1aacb7.jpg",
+		"http://i068.radikal.ru/1510/f8/b3e82cd21a08.jpg",
+		"http://s017.radikal.ru/i431/1510/9c/1c3a3ffeaea2.jpg",
+		"http://s020.radikal.ru/i716/1510/b5/2efd85dfecb8.jpg",
+		"http://s020.radikal.ru/i723/1510/f6/111f18c7b7be.jpg"
+	];
+	var main_photo_id = getRandomInt(1,9);
+	Node.addChild1(6,new Product(title.toUpperCase(),200,200,[
+		images[main_photo_id],
+		"http://s017.radikal.ru/i416/1510/81/3deca69a1630.jpg",
+		"http://s017.radikal.ru/i402/1510/cb/c98f4fdb1e0a.jpg",
+		"http://s017.radikal.ru/i427/1510/90/9130d4cbe465.jpg",
+		"http://s017.radikal.ru/i414/1510/16/adbb550264d8.jpg",
+		"http://s004.radikal.ru/i206/1510/36/825dbe1aacb7.jpg",
+		"http://i068.radikal.ru/1510/f8/b3e82cd21a08.jpg",
+		"http://s017.radikal.ru/i431/1510/9c/1c3a3ffeaea2.jpg",
+		"http://s020.radikal.ru/i716/1510/b5/2efd85dfecb8.jpg",
+		"http://s020.radikal.ru/i723/1510/f6/111f18c7b7be.jpg"
+	]));
+}
 //Node.addChild1(2,new Product("помидорЪ дальневосточный",200,200,["http:\\3.com","http:\\4.com"]));
 //Node.addChild1(1,new Product("огурец ближневосточный",250,250,["http:\\1.com","http:\\2.com"]));
 /* Node.addChild1(1,new Product(3,"огурец ближневосточный",250,250,["http:\\1.com","http:\\2.com"]));
@@ -313,13 +382,16 @@ TeaShopCatalogCreator.prototype.drawFirstLevel = function()
 			ChildDiv.setAttribute("product-id",this.content.node.children[i].Id);
 			ChildDiv.setAttribute("category-level",this.content.node.children[i].level);
 			//console.log(ChildDiv.getAttribute("category-level"));
-			ChildDiv.addEventListener("click",this.listLevel(this.content.node.children[i].Id,this.content.node.children[i].level+1));
+			var this_ref=this;
+			ChildDiv.addEventListener("click",function(event)
+			{
+				event.stopPropagation();
+				console.log("this_ref.content.node.children[i].Id:"+this_ref.content.node.children[i].Id)
+				this_ref.listLevel(this_ref.content.node.children[i].Id,this_ref.content.node.children[i].level+1);
+			});
 			firstLevelDiv.appendChild(ChildDiv);
 		}
-		
 	}
-	//throw new Error("нет дочерних элементов в узле!");
-	
 }
 ////
 TeaShopCatalogCreator.prototype.listLevel = function (parent_id,level)
@@ -349,7 +421,7 @@ TeaShopCatalogCreator.prototype.listLevel = function (parent_id,level)
 			fl_one_has_children=true;
 		}
 	}
-	//функция создания div'a уровня
+	/* //функция создания div'a уровня
 	function createLevelDiv(_level_)
 	{
 		var leveldiv = document.createElement("div");
@@ -373,6 +445,8 @@ TeaShopCatalogCreator.prototype.listLevel = function (parent_id,level)
 		var newCatDiv = document.createElement("div");
 		newCatDiv.className = "category_container_child";
 		newCatDiv.setAttribute("category-level",_level_);
+		newCatDiv.setAttribute("product-id",_Node_.children[_chi_].Id);
+		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
 		newCatDiv.innerText = _Node_.children[_chi_].name;
 		return newCatDiv;
 	}
@@ -427,7 +501,7 @@ TeaShopCatalogCreator.prototype.listLevel = function (parent_id,level)
 		newProductDiv.appendChild(newProductBuyBtn);	
 		//возвращаем карточку товара
 		return newProductDiv;
-	}
+	} */
 	//если хотя бы у одного дочернего элемента дочернего элемента 
 	if(fl_one_has_children!=false)
 	{
@@ -442,7 +516,7 @@ TeaShopCatalogCreator.prototype.listLevel = function (parent_id,level)
 		for(var chi=0;chi<Node.children.length;chi++)
 		{
 			//
-			console.log(Node.children[chi].children.length);
+			//console.log(Node.children[chi].children.length);
 			if(Node.children[chi].children.length!=0)
 			{
 				//создаем div для дочернего элемента
@@ -521,6 +595,296 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 {
 	this.
 } */
-var content={node:Node};
-var tc = new TeaShopCatalogCreator(content);
-tc.createCategoryBar(1,"red");
+
+
+//функция создания div'a уровня
+	TeaShopCatalogCreator.prototype.createLevelDiv = function(_level_,_parent_id_)
+	{
+		var leveldiv = document.createElement("div");
+		leveldiv.className = "levelTitle";
+		leveldiv.innerText = "LEVEL"+_level_;
+		leveldiv.setAttribute("category-level",_level_);
+		leveldiv.setAttribute("parent-id",_parent_id_);
+		return leveldiv;
+	};
+	//функция создания div'а Категории
+	TeaShopCatalogCreator.prototype.createCategoryDiv = function(_level_,_parent_id_)
+	{
+		var newCatDiv = document.createElement("div");
+		newCatDiv.className = "category_container";
+		newCatDiv.setAttribute("category-level",_level_);
+		//newCatDiv.innerText = _Node_.children[chi].name;
+		newCatDiv.setAttribute("parent-id",_parent_id_);
+		return newCatDiv;
+	};
+	//функция создания div'a Элемента категории(уже из каталога)
+	TeaShopCatalogCreator.prototype.createCategoryChildDiv = function(_Node_,_chi_,_level_)
+	{
+		var newCatDiv = document.createElement("div");
+		newCatDiv.className = "category_container_child";
+		newCatDiv.setAttribute("category-level",_level_);
+		newCatDiv.setAttribute("product-id",_Node_.children[_chi_].Id);
+		newCatDiv.setAttribute("parent-id",_Node_.Id);
+		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
+		newCatDiv.innerText = _Node_.children[_chi_].name;
+		return newCatDiv;
+	};
+	//функция создания div'а-карточки товара конечного продукта
+	TeaShopCatalogCreator.prototype.createProductDiv = function(_Product_)
+	{
+		var newProductDiv=document.createElement("div");
+		newProductDiv.className="good_container";
+		//заполняем карточку продукта.
+		//Название:
+		var newProductNameDiv=document.createElement("div");
+		newProductNameDiv.className = "good_name";
+		newProductNameDiv.innerText = _Product_.name;
+		newProductDiv.appendChild(newProductNameDiv);
+		//Основное фото
+		var newProductPhotoDiv = document.createElement("img");
+		newProductPhotoDiv.className = "good_mainphoto";
+		newProductPhotoDiv.src = _Product_.images_urls[0];
+		newProductDiv.appendChild(newProductPhotoDiv);
+		//Цена:
+		var newProductPriceDiv = document.createElement("div");
+		newProductPriceDiv.className = "good_price";
+		newProductPriceDiv.innerText = _Product_.price;
+		newProductDiv.appendChild(newProductPriceDiv);
+		//leastDiv для кнопок +,- и инпута.
+		var newProductLeastDiv = document.createElement("div");
+		newProductLeastDiv.className = "leastDiv";
+		//Кнопка -
+		var newProductMinusBtnDiv = document.createElement("div");
+		newProductMinusBtnDiv.className = "minusBtn";
+		newProductLeastDiv.appendChild(newProductMinusBtnDiv);
+		//Инпут
+		var newProductInput = document.createElement("input");
+		newProductInput.value=1;
+		newProductInput.className="inputQuantity";
+		newProductLeastDiv.appendChild(newProductInput);
+		//Кнопка +
+		var newProductPlusBtnDiv = document.createElement("div");
+		newProductPlusBtnDiv.className = "plusBtn";
+		newProductLeastDiv.appendChild(newProductPlusBtnDiv);
+		//присоединяем leastDiv к карточке
+		newProductDiv.appendChild(newProductLeastDiv);
+		//кнопка "Купить"
+		var newProductBuyBtn = document.createElement("div");
+		newProductBuyBtn.className="buttonBuy";
+		newProductBuyBtn.innerText = "Купить";
+		//
+		//
+		//newProductBuyBtn.addEventListener("click") - сюда!!!
+		//
+		//
+		newProductDiv.appendChild(newProductBuyBtn);	
+		//возвращаем карточку товара
+		return newProductDiv;
+	}
+////вывести все дерево
+TeaShopCatalogCreator.prototype.outPutAllTree = function()
+{
+	var leveldiv = this.createLevelDiv(1,0);
+	//document.body.appendChild(leveldiv);
+	var firstLevelDiv = this.createCategoryDiv(1,0);
+	var categories_List_Div = document.createElement("div");	
+	categories_List_Div.className = "category";
+	//categories_List_Div.innerText = "categoryListDiv";
+	categories_List_Div.appendChild(leveldiv);
+	categories_List_Div.appendChild(firstLevelDiv);
+	//document.body.appendChild(categories_List_Div);
+	//insert before contentcontainer!!!
+	var contentContainer = document.getElementsByClassName("content_container");
+	var td = document.getElementById("allproducts");
+	td.insertBefore(categories_List_Div,contentContainer[0]);
+	//в последующих шагах прикрепляем детей к firstLevelDiv'у
+	for(var i=0;i<this.content.node.children.length;i++)
+	{
+		var ChildDiv = this.createCategoryChildDiv(this.content.node,i,1);
+		firstLevelDiv.appendChild(ChildDiv);
+		this.outputNextLevel(this.content.node.children[i].Id,this.content.node.children[i].level+1);
+	}
+	
+}
+////рекурсивная функция вывода следующего уровня
+TeaShopCatalogCreator.prototype.outputNextLevel = function(parent_id,level)
+{
+	//level-текущий уровень!!!
+	//родитель
+	Nd = this.content.node.searchNode(parent_id,this.content.node,0);
+	var Node = Nd.element;
+	if(Node==null)
+	{
+		return null;
+	}
+	//рисуем детей
+	var fl_one_has_children=false;
+	for(var chi=0;chi<Node.children.length;chi++)
+	{
+		//
+		if(Node.children[chi].children.length!=0)
+		{
+			
+			fl_one_has_children=true;
+		}
+	}
+	//если хотя бы у одного дочернего элемента дочернего элемента 
+	if(fl_one_has_children!=false)
+	{
+		//создаем для узла название
+		var LEVEL = this.createLevelDiv(level,Node.Id);
+		var CATEGORY = this.createCategoryDiv(level,Node.Id);
+		//var CATEGORY_CHILD = createCategoryChildDiv( 
+		var categories_List_Div = document.getElementsByClassName("category");
+		categories_List_Div[0].appendChild(LEVEL);
+		categories_List_Div[0].appendChild(CATEGORY);
+		//создаем узел
+		for(var chi=0;chi<Node.children.length;chi++)
+		{
+			//
+			//console.log(Node.children[chi].children.length);
+			if(Node.children[chi].children.length!=0)
+			{
+				//создаем div для дочернего элемента
+				var CHILD = this.createCategoryChildDiv(Node,chi,level);
+				CATEGORY.appendChild(CHILD);
+				this.outputNextLevel(Node.children[chi].Id,level+1);
+			}
+		}
+	}
+}
+////сокрытие всех элементов массива
+TeaShopCatalogCreator.prototype.displayNoneDivs = function(arrayOfDivs)
+{
+	for(var i=0;i<arrayOfDivs.length;i++)
+	{
+		arrayOfDivs[i].style.display="none";
+	}
+}
+////сокрытие всех уровней больших level
+TeaShopCatalogCreator.prototype.displayNoneNextLevels = function(level)
+{
+	var category_container_children = document.getElementsByClassName("category_container_child");
+	var levelTitles = document.getElementsByClassName("levelTitle");
+	var category_containers = document.getElementsByClassName("category_container");
+	for(var i=0;i<category_container_children.length;i++)
+	{
+		if(category_container_children[i].getAttribute("category-level")>=level+1)
+		{
+			category_container_children[i].style.display="none";
+		}
+	}
+	for(var i=0;i<levelTitles.length;i++)
+	{
+		if(levelTitles[i].getAttribute("category-level")>=level+1)
+		{
+			levelTitles[i].style.display="none";
+		}
+	}
+	for(var i=0;i<category_containers.length;i++)
+	{
+		if(category_containers[i].getAttribute("category-level")>=level+1)
+		{
+			category_containers[i].style.display="none";
+		}
+	}
+}
+//отобразить детей на определенном уровне определенного предка(parent_id)
+TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
+{
+	var levelTitles = document.getElementsByClassName("levelTitle");
+	//контейнеры категории
+	var category_containers = document.getElementsByClassName("category_container");
+	//контейнеры детей
+	var category_container_children = document.getElementsByClassName("category_container_child");
+	if(level>1)
+	{
+		this.displayNoneNextLevels(level-1);
+	}
+	//отобразить только элементы с заданным уровнем и отеческим идентификаторомЪ
+	this.displayInlineLevelBlocks(levelTitles,level,parent_id);
+	this.displayInlineBlocks(category_containers,level,parent_id);
+	this.displayInlineBlocks(category_container_children,level,parent_id);
+	
+	
+	//удаление всех товаров, если были до нажатия на документе.
+	this.clearProductList();
+	var ParentNode = this.content.node.searchNode(parent_id,this.content.node,0).element;
+	for(var j=0;j<ParentNode.children.length;j++)
+	{
+		if(ParentNode.children[j].children.length==0)
+		{
+			var PRODUCT = this.createProductDiv(ParentNode.children[j]);
+			var allproducts = document.getElementsByClassName("content_container");
+			allproducts[0].appendChild(PRODUCT); 
+		}
+	}
+	//простановка обработчиков собитий!!!
+	for(var i=0;i<category_container_children.length;i++)
+	{
+		//1- левел и пэрент айди должны соответствовать статусу))
+		if((category_container_children[i].getAttribute("category-level")==level)&&(category_container_children[i].getAttribute("parent-id")==parent_id))
+		{
+			//на данном уровне смотрим, у кого из детей есть дети, т.е. внуковDDD
+			var childProduct = this.content.node.searchNode(category_container_children[i].getAttribute("product-id"),this.content.node,0).element;
+			//проверяем, есть ли у childProduct дети
+			if (childProduct.children.length!=0)
+			{
+			//если есть дети, то регистрируем собитие нажатия этого потомка и отображения в категориях
+				var this_ref = this;
+				category_container_children[i].addEventListener("click",function(event)
+				{
+					event.stopPropagation(childProduct);
+					this_ref.displayOnLevel(level+1,event.target.getAttribute("product-id"));
+				});
+				
+			}
+		}
+	}
+
+}
+////
+TeaShopCatalogCreator.prototype.displayInlineBlocks = function(tagsContainer,level,parent_id)
+{
+	for(var i=0;i<tagsContainer.length;i++)
+	{
+		if((tagsContainer[i].getAttribute("category-level")==level)&&(tagsContainer[i].getAttribute("parent-id")==parent_id))
+		{
+			tagsContainer[i].style.display="inline-block";
+		}
+	}
+}
+TeaShopCatalogCreator.prototype.displayInlineLevelBlocks = function(tagsContainer,level,parent_id)
+{
+	for(var i=0;i<tagsContainer.length;i++)
+	{
+		if((tagsContainer[i].getAttribute("category-level")==level)&&(tagsContainer[i].getAttribute("parent-id")==parent_id))
+		{
+			tagsContainer[i].style.display="block";
+		}
+	}
+}
+////регистрация событий
+TeaShopCatalogCreator.prototype.RegisterEvents = function()
+{
+	//основной див со списком 
+	var ListDivs = document.getElementsByClassName("category");
+	//ищем элементы в списке
+	var levelTitles = document.getElementsByClassName("levelTitle");
+	//контейнеры категории
+	var category_containers = document.getElementsByClassName("category_container");
+	//контейнеры детей
+	var category_container_children = document.getElementsByClassName("category_container_child");
+	
+	//убираем все элементы в инвиз
+	this.displayNoneDivs(levelTitles);
+	this.displayNoneDivs(category_container_children);
+	this.displayNoneDivs(category_containers); 
+	
+	//отображаем конкретный уровень со своими тайтлами, принадлежащими к определенному уровню
+	this.displayOnLevel(1,0);
+	
+}
+//var content={node:Node};
+//var tc = new TeaShopCatalogCreator(content);
+//tc.createCategoryBar(1,"red");

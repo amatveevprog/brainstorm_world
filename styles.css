@@ -95,6 +95,10 @@
 	width:200px;
 	height:40px;
 	border: 1px solid black;
+	color:#000000;
+	font-size:12pt;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	font-weight:bold;
 }
 .good_price
 {
