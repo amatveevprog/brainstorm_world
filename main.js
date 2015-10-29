@@ -120,7 +120,7 @@ Product.prototype.listChildren = function()
 	return this.children;
 };
 
-
+var audios=["http://9338098.ru/wp-content/themes/MyRecipe/audio/death1.mp3","http://9338098.ru/wp-content/themes/MyRecipe/audio/death2.mp3","http://9338098.ru/wp-content/themes/MyRecipe/audio/death3.mp3","http://9338098.ru/wp-content/themes/MyRecipe/audio/death4.mp3","http://9338098.ru/wp-content/themes/MyRecipe/audio/death5.mp3","http://9338098.ru/wp-content/themes/MyRecipe/audio/death6.mp3"];
 
 Node = Object.create(Product.prototype);
 Node = new Product(0,null,0,0,[]);
@@ -154,7 +154,7 @@ function getRandomInt(min, max)
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-for(var i=0;i<200;i++)
+for(var i=0;i<1200;i++)
 {
 	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
 	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
@@ -835,6 +835,10 @@ TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 				category_container_children[i].addEventListener("click",function(event)
 				{
 					event.stopPropagation(childProduct);
+					var audio = new Audio();
+	        audio.src=audios[getRandomInt(0, 5)];
+	        audio.load();
+	        audio.play();
 					this_ref.displayOnLevel(level+1,event.target.getAttribute("product-id"));
 				});
 				
