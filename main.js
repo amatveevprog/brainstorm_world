@@ -154,7 +154,7 @@ function getRandomInt(min, max)
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-for(var i=0;i<100;i++)
+for(var i=0;i<200;i++)
 {
 	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
 	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
