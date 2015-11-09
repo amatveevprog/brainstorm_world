@@ -15,8 +15,7 @@ body
 	color:#F7DEC5;
 	margin-top:20px;
 	margin-left:9%;
-	margin-right:11%;
-	padding:auto;
+
 
 
 }
@@ -103,13 +102,19 @@ body
 	//border-radius:99px;
   background-color: rgba(238, 245, 219, 0.6);
 
-	margin:20px;
+	margin:12px;
 }
 .good_mainphoto
 {
+
   border-radius:999px;
-	height:200px;
-	width:200px;
+	//height:190px;
+	//width:190px;
+	margin-left:auto;
+	margin-right:auto;
+	display:inline-block;
+	height:90%;
+	width:90%;
 
 }
 .good_name
