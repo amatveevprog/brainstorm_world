@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8"/>
+
 <html>
 
 <body>
@@ -7,17 +8,18 @@
 
 </style>
 <link rel="stylesheet" href="styles.css">
+<link rel = "stylesheet" type="text/css" href="cart.css">
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
  <script src="main.js"></script>
-<table width="100%">
-<tr>
-<td id="allproducts"><div class="content_container">
+
+
+<div id="allproducts">
+<div class="content_container">
 
 </div>
-</td>
-<td width="150px"><div class="shoppingcart_container">для корзины и соответствующей информации о заказе...</div></td>
-</tr>
-</table>
+</div>
+
+
 <script>
 //tc.clearProductList();
 //tc.clearCategoryList(1);
@@ -30,6 +32,6 @@ var tc = new TeaShopCatalogCreator(content);
 tc.outPutAllTree();
 tc.RegisterEvents();
 </script>
-
+    <script src="Shopping_cart_widget.js"></script>
 </body>
 </html>

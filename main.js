@@ -232,16 +232,11 @@ function TeaShopCatalogCreator(_content)
 	this.content=_content;
 	this.imagesURI = 
 	[
-		"http://s017.radikal.ru/i443/1510/bf/0c0f26da0574.jpg",
-		"http://s017.radikal.ru/i416/1510/81/3deca69a1630.jpg",
-		"http://s017.radikal.ru/i402/1510/cb/c98f4fdb1e0a.jpg",
-		"http://s017.radikal.ru/i427/1510/90/9130d4cbe465.jpg",
-		"http://s017.radikal.ru/i414/1510/16/adbb550264d8.jpg",
-		"http://s004.radikal.ru/i206/1510/36/825dbe1aacb7.jpg",
-		"http://i068.radikal.ru/1510/f8/b3e82cd21a08.jpg",
-		"http://s017.radikal.ru/i431/1510/9c/1c3a3ffeaea2.jpg",
-		"http://s020.radikal.ru/i716/1510/b5/2efd85dfecb8.jpg",
-		"http://s020.radikal.ru/i723/1510/f6/111f18c7b7be.jpg"
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://us.123rf.com/450wm/glasscuter/glasscuter1205/glasscuter120500038/13671543-gr-ne-chinesischen-tee-textur.jpg",
+		"http://st.depositphotos.com/1788556/1534/i/950/depositphotos_15344677-Seamless-texture-of-green-tea.jpg"
 	];
 }
 TeaShopCatalogCreator.prototype.createCategoryBar = function (level,color)
@@ -251,14 +246,14 @@ TeaShopCatalogCreator.prototype.createCategoryBar = function (level,color)
 	{
 		var leveldiv = document.createElement("div");
 		leveldiv.className = "levelTitle";
-		leveldiv.innerText = "LEVEL"+_level_;
+
 		leveldiv.setAttribute("category-level",_level_);
-		leveldiv.style.border = "2px dashed blue"
+
 		//leveldiv.innerText+="__________class: "+leveldiv.className;
 		
 		var littlediv = document.createElement("div");
-		littlediv.style.border="1px dashed blue";
-		littlediv.style.fontSize="10pt";
+
+
 		littlediv.innerText = "____class: <"+leveldiv.className+">";
 		leveldiv.appendChild(littlediv);
 		
@@ -275,8 +270,7 @@ TeaShopCatalogCreator.prototype.createCategoryBar = function (level,color)
 		//newCatDiv.innerText = _Node_.children[chi].name;
 		//newCatDiv.innerText="class: "+newCatDiv.className;
 		var littlediv = document.createElement("div");
-		littlediv.style.border="1px dashed blue";
-		littlediv.style.fontSize="10pt";
+
 		littlediv.style.color="black";
 		littlediv.innerText = "____class: <"+newCatDiv.className+">";
 		newCatDiv.appendChild(littlediv);
@@ -292,7 +286,7 @@ TeaShopCatalogCreator.prototype.createCategoryBar = function (level,color)
 		newCatDiv.setAttribute("category-level",_level_);
 		newCatDiv.innerText = _Node_.children[_chi_].name;
 		var littlediv = document.createElement("div");
-		littlediv.style.border="2px double black";
+
 		littlediv.style.fontSize="8pt";
 		littlediv.innerText = "____class: <"+newCatDiv.className+">";
 		newCatDiv.appendChild(littlediv);
@@ -361,7 +355,7 @@ TeaShopCatalogCreator.prototype.drawFirstLevel = function()
 		//1-создаем див с категорией
 		var leveldiv = document.createElement("div");
 		leveldiv.className = "levelTitle";
-		leveldiv.innerText = "LEVEL1";
+
 		leveldiv.setAttribute("category-level",1);
 		//leveldiv.addEventListener("click",function(){console.log("Щёлк!")});
 		document.body.appendChild(leveldiv);
@@ -378,7 +372,7 @@ TeaShopCatalogCreator.prototype.drawFirstLevel = function()
 		{
 			var ChildDiv = document.createElement("div");
 			ChildDiv.className = "category_container_child";
-			ChildDiv.innerText = this.content.node.children[i].name;
+			//ChildDiv.innerText = this.content.node.children[i].name;
 			ChildDiv.setAttribute("product-id",this.content.node.children[i].Id);
 			ChildDiv.setAttribute("category-level",this.content.node.children[i].level);
 			//console.log(ChildDiv.getAttribute("category-level"));
@@ -602,7 +596,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 	{
 		var leveldiv = document.createElement("div");
 		leveldiv.className = "levelTitle";
-		leveldiv.innerText = "LEVEL"+_level_;
+	  
 		leveldiv.setAttribute("category-level",_level_);
 		leveldiv.setAttribute("parent-id",_parent_id_);
 		return leveldiv;
@@ -639,7 +633,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		var newProductNameDiv=document.createElement("div");
 		newProductNameDiv.className = "good_name";
 		newProductNameDiv.innerText = _Product_.name;
-		newProductDiv.appendChild(newProductNameDiv);
+		//newProductDiv.appendChild(newProductNameDiv);
 		//Основное фото
 		var newProductPhotoDiv = document.createElement("img");
 		newProductPhotoDiv.className = "good_mainphoto";
@@ -649,28 +643,28 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		var newProductPriceDiv = document.createElement("div");
 		newProductPriceDiv.className = "good_price";
 		newProductPriceDiv.innerText = _Product_.price;
-		newProductDiv.appendChild(newProductPriceDiv);
+		//newProductDiv.appendChild(newProductPriceDiv);
 		//leastDiv для кнопок +,- и инпута.
-		var newProductLeastDiv = document.createElement("div");
-		newProductLeastDiv.className = "leastDiv";
+		//var newProductLeastDiv = document.createElement("div");
+	//	newProductLeastDiv.className = "leastDiv";
 		//Кнопка -
-		var newProductMinusBtnDiv = document.createElement("div");
-		newProductMinusBtnDiv.className = "minusBtn";
-		newProductLeastDiv.appendChild(newProductMinusBtnDiv);
+		//var newProductMinusBtnDiv = document.createElement("div");
+		//newProductMinusBtnDiv.className = "minusBtn";
+	//	newProductLeastDiv.appendChild(newProductMinusBtnDiv);
 		//Инпут
-		var newProductInput = document.createElement("input");
-		newProductInput.value=1;
-		newProductInput.className="inputQuantity";
-		newProductLeastDiv.appendChild(newProductInput);
+	//	var newProductInput = document.createElement("input");
+	//	newProductInput.value=1;
+	//	newProductInput.className="inputQuantity";
+	//	newProductLeastDiv.appendChild(newProductInput);
 		//Кнопка +
-		var newProductPlusBtnDiv = document.createElement("div");
-		newProductPlusBtnDiv.className = "plusBtn";
-		newProductLeastDiv.appendChild(newProductPlusBtnDiv);
+	//	var newProductPlusBtnDiv = document.createElement("div");
+	//	newProductPlusBtnDiv.className = "plusBtn";
+	//	newProductLeastDiv.appendChild(newProductPlusBtnDiv);
 		//присоединяем leastDiv к карточке
-		newProductDiv.appendChild(newProductLeastDiv);
+	//	newProductDiv.appendChild(newProductLeastDiv);
 		//кнопка "Купить"
 		var newProductBuyBtn = document.createElement("div");
-		newProductBuyBtn.className="buttonBuy";
+		newProductBuyBtn.className="BuyBtn";
 		newProductBuyBtn.innerText = "Купить";
 		//
 		//

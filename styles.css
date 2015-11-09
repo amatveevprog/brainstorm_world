@@ -1,17 +1,26 @@
+body
+{
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  background: url(http://cs628719.vk.me/v628719222/25edb/WOnjHpkgc2E.jpg) repeat;
+  filter: alpha(opacity=90);
+}
+
 .content_container
 {
+  background:rgba(255,255,255, 0.7);
+  width:80%;
 	color:#F7DEC5;
-	//padding:0px 100px 100px 20px;
-	border: 2px solid black;
-	//margin:0px 50px 10px 50px;
-	margin:10px;
+	margin-left:9%;
+	margin-right:11%;
+
 }
 .productcontent_container
 {
 	font-family:Helvetica, Arial, sans-serif;
-	border: 2px solid black;
-	margin:0px 50px 0px 0px;
-	color:#fff;
+
+	margin:50px;
 	font-size:16pt;
 }
 .levelTitle
@@ -29,24 +38,30 @@
 	//margin-right:0px;
 	right:10px;
 	width:120px;
-	border: 2px solid black;
-	padding:10px;
+ margin:0px 0px 0px 0px;
+
 }
 /* категории товаров */
 .category
 {
+  
+  width:80%;
+	color:#F7DEC5;
+	margin-left:9%;
+	margin-right:11%;
+  box-shadow: 2px 2px 1px #2e3939;
+
+  background: white;
 	font-family:Helvetica, Arial, sans-serif;
-	border: 4px dotted green;
-	margin:0px 50px 0px 0px;
+  box
 	//color:#fff;
 	//font-size:16pt;
 	//cursor:pointer;
 }
 .category_container
 {
+  margin: 0px auto;
 	font-family:Helvetica, Arial, sans-serif;
-	border: 2px solid black;
-	margin:0px 50px 0px 0px;
 	color:#fff;
 	font-size:16pt;
 	cursor:pointer;
@@ -55,7 +70,7 @@
 {
 	display:inline-block;
 	font-family:Helvetica, Arial, sans-serif;
-	border: 2px solid black;
+
 	margin:0px 50px 0px 0px;
 	color:black;
 	font-size:16pt;
@@ -75,26 +90,27 @@
 }
 .good_container
 {
+    box-shadow: 2px 2px 1px #2e3939;
 	display:inline-block;
-	background:url(http://culture-club.ru/teatime/images/q6Z5LQ4LWVo.jpg);
-	height:390px;
+	height:200px;
 	width:200px;
-	border: 2px solid black;
-	//background:#05B6DE;
-	margin:10px;
+	border-radius:99px;
+  background-color: rgba(238, 245, 219, 0.6);
+
+	margin:20px;
 }
 .good_mainphoto
 {
-	height:150px;
-	width:150px;
-	border: 1px solid black;
-	margin:20px;
+  border-radius:999px;
+	height:200px;
+	width:200px;
+
 }
 .good_name
 {
 	width:200px;
 	height:40px;
-	border: 1px solid black;
+
 	color:#000000;
 	font-size:12pt;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
@@ -104,7 +120,7 @@
 {
 	width:200px;
 	height:30px;
-	border: 1px solid black;
+
 }
 .inputQuantity
 {
