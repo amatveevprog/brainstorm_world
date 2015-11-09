@@ -9,17 +9,23 @@ body
 
 .content_container
 {
-  background:rgba(255,255,255, 0.7);
+  //background:rgba(255,255,255, 0.7);
+  background:#F25F5C;
   width:80%;
 	color:#F7DEC5;
+	margin-top:20px;
 	margin-left:9%;
 	margin-right:11%;
+	padding:auto;
+
 
 }
 .productcontent_container
 {
-	font-family:Helvetica, Arial, sans-serif;
 
+	font-family:Helvetica, Arial, sans-serif;
+  padding-left:auto;
+  padding-right:auto;
 	margin:50px;
 	font-size:16pt;
 }
@@ -45,10 +51,10 @@ body
 .category
 {
   
-  width:80%;
+  //width:80%;
 	color:#F7DEC5;
-	margin-left:9%;
-	margin-right:11%;
+	//margin-left:9%;
+	//margin-right:11%;
   box-shadow: 2px 2px 1px #2e3939;
 
   background: white;
@@ -90,11 +96,11 @@ body
 }
 .good_container
 {
-    box-shadow: 2px 2px 1px #2e3939;
+  box-shadow: 1px 1px 1px #2e3939;
 	display:inline-block;
 	height:200px;
 	width:200px;
-	border-radius:99px;
+	//border-radius:99px;
   background-color: rgba(238, 245, 219, 0.6);
 
 	margin:20px;
