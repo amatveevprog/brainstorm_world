@@ -1,0 +1,219 @@
+
+
+.cartdiv
+ {   scrollbar-track-color:yellow;
+     background: #F25F5C;
+     position:absolute;
+     top:0;
+     bottom:0;
+     height:100%;
+     right:0;
+     width:0%;
+  
+     opacity:0;
+     -webkit-transition:width .05s linear;
+     transition:width .05s linear;
+     -webkit-transform:translateZ(0) scale(1,1);
+     z-index:1000;
+     overflow:hidden;
+     position:fixed;
+ }
+ 
+ .carticon
+  {
+    margin-top:10px;
+    margin-left:5px;
+    width:40px;
+    position:relative;
+
+  }
+  
+   .elemicon
+  {
+    margin-left:6px;
+    width:20px;
+    position:relative;
+    opacity:0;
+    float: left;
+    
+
+  }
+  
+  .cartelemdiv
+  {
+     color: #171123;
+     opacity:0.9;
+     border-radius:2px;
+     width:1px;
+     height:40px;
+     margin-top:5px;
+     padding-left:5px;
+     padding-bottom:3px;
+     background:#EEF5DB;
+     box-shadow: 2px 2px 1px #2e3939;
+  }
+  
+  
+  .cartelemdiv:hover
+  {
+ 
+    opacity:1;
+    border:5px;
+    margin-left:6px;
+    transition: 0.4s ease;
+    
+
+
+  }  
+
+.icondiv
+{
+  width:40px;
+  height:50px;
+
+}
+
+
+
+.elemtext
+{
+  position:relative;
+}
+
+.delimeter
+{
+  height:10px;
+  position:relative;
+}
+
+
+
+
+.cartelemdivright
+{ 
+
+   float:right;
+   width:150px;
+   height:74px;
+   display:none;
+
+   margin-top:-22px;
+
+
+}
+
+.cartelemdivright_up
+{
+  margin:0px;
+
+  height:40px;
+  width:142px;
+
+}
+
+
+.cartelemdivright_down
+{
+  margin:0px;
+
+  height:35px;
+  width:142px;
+
+}
+
+
+.carttitle
+{
+  
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  float:left;
+}
+
+
+.carttitleQuantity
+{
+  
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  float:left;
+    font-size:15px;
+}
+
+
+
+.carttitlePrice
+{
+  
+  text-align: left;
+  margin:0px;
+  padding:0px;
+  float:left;
+    font-size:23px;
+}
+
+
+.plusbutton
+{
+  display: inline-block;
+  border: none;
+  padding: 0;
+  width:22px;
+  font-size:17px;
+  height:22px;
+  background-color:#114B5F;
+  color:white;
+}
+
+.plusbutton:hover 
+{
+    opacity: 0.4;
+    transition: .2s ease;
+}
+
+
+.plusminusbtns
+{
+  margin-left:5px;
+  margin-right:5px;
+  float:left;
+}
+
+
+
+
+.deleteitem
+{
+  display:block;
+  margin-top:-8px;
+  margin-right:-12px;
+  width:25px;
+  height:25px;
+  float:right;
+  border-radius:50px;
+  background: #114B5F;
+  border:5px;
+  border-color:#114B5F;
+  color:white;
+  
+}
+
+
+.deleteitem:hover
+{
+  
+    opacity: 0.4;
+    transition: .2s ease;
+}
+
+
+
+
+
+
+
+
+
+
