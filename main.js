@@ -627,7 +627,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 	//функция создания div'а-карточки товара конечного продукта
 	TeaShopCatalogCreator.prototype.createProductDiv = function(_Product_)
 	{
-		var newProductDiv=document.createElement("div");
+			var newProductDiv=document.createElement("div");
 		newProductDiv.className="good_container";
 		
 		//заполняем карточку продукта.
@@ -642,17 +642,33 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		newProductPhotoDiv.src = _Product_.images_urls[0];
 		newProductDiv.appendChild(newProductPhotoDiv);
 		
+		
+			// NEW NEW NEW ADD DIV WITH PARAMETERS
+		var detailsDIV = document.createElement("div"); 
+		detailsDIV.className="DetailsDiv";
+		newProductDiv.appendChild(detailsDIV);	
+		
+		
+		
 		// NEW NEW NEW БЛОК С ОПИСАНИЕМ, ПОЯВЛЯЮЩИЙСЯ
-		var newProductDescriptionDiv = document.createElement("div");
-		newProductDescriptionDiv.className = "good_description";
-		newProductDescriptionDiv.id = _Product_.name+'animid';
+		//var newProductDescriptionDiv = document.createElement("div");
+	//	newProductDescriptionDiv.className = "good_description";
+		//newProductDescriptionDiv.id = _Product_.name+'animid';
+		//Цена:
+		var newProductPriceDiv = document.createElement("div");
+		newProductPriceDiv.className = "good_price";
+		newProductPriceDiv.innerText = _Product_.price;
+		
+		//detailsDIV.appendChild(newProductPriceDiv);
+	//	detailsDIV.appendChild(newProductNameDiv);
 		
 		newProductDiv.addEventListener("mouseenter",function(event)
                   {
                     //hidewidgetcontent();
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
-                     var a = TweenLite.to(newProductDescriptionDiv, 0.2 ,{opacity:1,borderRadius:'0px'});
+                    // var a = TweenLite.to(newProductDescriptionDiv, 0.2 ,{opacity:1,borderRadius:'0px'});
+                    var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.9,height:'200px',marginTop:'-203px'});
                   });
                   
 			newProductDiv.addEventListener("mouseleave",function(event)
@@ -660,15 +676,13 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
                     //hidewidgetcontent();
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
-                     var a = TweenLite.to(newProductDescriptionDiv, 0.2,{opacity:0,borderRadius:'999px'});
+                     //var a = TweenLite.to(newProductDescriptionDiv, 0.2,{opacity:0,borderRadius:'999px'});
+                     var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.7,height:'70px', marginTop:'-73px'});
                   });
                   
                   
-		newProductDiv.appendChild(newProductDescriptionDiv);
-		//Цена:
-		var newProductPriceDiv = document.createElement("div");
-		newProductPriceDiv.className = "good_price";
-		newProductPriceDiv.innerText = _Product_.price;
+		//newProductDiv.appendChild(newProductDescriptionDiv);
+	
 		
 		
 	
@@ -704,10 +718,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//
 		//newProductDiv.appendChild(newProductBuyBtn);	
 		
-		// NEW NEW NEW ADD DIV WITH PARAMETERS
-		var detailsDIV = document.createElement("div"); 
-		detailsDIV.className="DetailsDiv";
-		newProductDiv.appendChild(detailsDIV);	
+	
 		//возвращаем карточку товара
 		return newProductDiv;
 	}

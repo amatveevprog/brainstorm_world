@@ -97,8 +97,8 @@ body
   z-index: 1;
   box-shadow: 1px 1px 1px #2e3939;
 	display:inline-block;
-	height:250px;
-	width:250px;
+	height:200px;
+	width:200px;
 	//border-radius:99px;
   background-color: rgba(238, 245, 219, 0.6);
 
@@ -110,8 +110,8 @@ body
   z-index: 1;
   box-shadow: 1px 1px 1px #2e3939;
   //border-radius:999px;
-	height:250px;
-	width:250px;
+	height:200px;
+	width:200px;
 	margin-left:auto;
 	margin-right:auto;
 	//display:inline-block;
@@ -120,18 +120,21 @@ body
 }
 .good_name
 {
-	width:200px;
-	height:40px;
+	//width:200px;
+	//height:40px;
  
 	color:#000000;
 	font-size:12pt;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
+	position: relative;
+	display:inline;
 }
 .good_price
 {
-	width:200px;
-	height:30px;
+  position: relative;
+	//width:200px;
+	//height:30px;
 
 }
 .inputQuantity
@@ -275,6 +278,6 @@ cursor:pointer;
   background:rgba(255,255,255, 0.7);
   z-index:21;
   height:70px;
-	width:250px;
-	margin-top:-70px;
+	width:200px;
+	margin-top:-73px;
 }
