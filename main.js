@@ -702,7 +702,12 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//newProductBuyBtn.addEventListener("click") - сюда!!!
 		//
 		//
-		newProductDiv.appendChild(newProductBuyBtn);	
+		//newProductDiv.appendChild(newProductBuyBtn);	
+		
+		// NEW NEW NEW ADD DIV WITH PARAMETERS
+		var detailsDIV = document.createElement("div"); 
+		detailsDIV.className="DetailsDiv";
+		newProductDiv.appendChild(detailsDIV);	
 		//возвращаем карточку товара
 		return newProductDiv;
 	}

@@ -13,10 +13,8 @@ body
   background:#F25F5C;
   width:80%;
 	color:#F7DEC5;
-	margin-top:20px;
+	margin-top:40px;
 	margin-left:9%;
-
-
 
 }
 .productcontent_container
@@ -269,6 +267,14 @@ cursor:pointer;
   margin-top:-203px;
   z-index:20;
 
-
 }
 
+.DetailsDiv
+{
+  position: relative;
+  background:rgba(255,255,255, 0.7);
+  z-index:21;
+  height:70px;
+	width:250px;
+	margin-top:-70px;
+}
