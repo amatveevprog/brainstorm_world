@@ -143,9 +143,9 @@ Node.addChild(Node.children[3],new Product("АК-12",80000,0,["http://rostec.ru/
 Node.addChild(Node.children[4],new Product("ПКП Печенег",80000,0,["http://mensby.com/images/stories/articles/2015/5581/upgraded-machinegun-pecheneg-sp-01.jpg"]));
 Node.addChild(Node.children[2].children[0].children[0],new Product("Граната Ф-3",0,0,["https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/F1_grenade_travmatik_com_02_by-sa.jpg/250px-F1_grenade_travmatik_com_02_by-sa.jpg"]));
 //console.log(Node.maxLevel());
-var glass = "аоуыэяёюие";
-var soglass = "йцкнгшщзхъфвпрлджчсмтьб";
-var alphabet = "абвгдеёжзиклмнопрстуфхцчшщъыьэюя";
+var glass = "аоуыэя";
+var soglass = "эыаоуя";
+var alphabet = "абвгдеёжзиклмнопрстухцчш";
 var cifr = "1234567890";
 var tea = "чай";
 var addOn = "c добавлением";
@@ -659,8 +659,19 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		newProductPriceDiv.className = "good_price";
 		newProductPriceDiv.innerText = _Product_.price;
 		
-		//detailsDIV.appendChild(newProductPriceDiv);
-	//	detailsDIV.appendChild(newProductNameDiv);
+		
+		
+			var newProductBuyBtn = document.createElement("div");
+		newProductBuyBtn.className="buybtn";
+		newProductBuyBtn.innerText = "Купить/Подробнее";
+		
+		
+		
+		
+		
+		detailsDIV.appendChild(newProductPriceDiv);
+		detailsDIV.appendChild(newProductNameDiv);
+		detailsDIV.appendChild(newProductBuyBtn);
 		
 		newProductDiv.addEventListener("mouseenter",function(event)
                   {
@@ -668,7 +679,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
                     // var a = TweenLite.to(newProductDescriptionDiv, 0.2 ,{opacity:1,borderRadius:'0px'});
-                    var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.9,height:'200px',marginTop:'-203px'});
+                    var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.9,height:'200px',marginTop:'-203px',onComplete:showbuybutton});
                   });
                   
 			newProductDiv.addEventListener("mouseleave",function(event)
@@ -677,15 +688,23 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
                      //var a = TweenLite.to(newProductDescriptionDiv, 0.2,{opacity:0,borderRadius:'999px'});
-                     var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.7,height:'70px', marginTop:'-73px'});
+                     var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.8,height:'70px', marginTop:'-73px',onComplete:hidebuybutton});
                   });
                   
                   
 		//newProductDiv.appendChild(newProductDescriptionDiv);
 	
-		
+		function showbuybutton()
+		 {
+		   var b = TweenLite.to(newProductBuyBtn, 0.2 ,{opacity:1});
+		 }
 		
 	
+		
+		function hidebuybutton()
+		 {
+		   var b = TweenLite.to(newProductBuyBtn, 0.2 ,{opacity:0});
+		 }
 		
 		
 		//newProductDiv.appendChild(newProductPriceDiv);
@@ -708,9 +727,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//присоединяем leastDiv к карточке
 	//	newProductDiv.appendChild(newProductLeastDiv);
 		//кнопка "Купить"
-		var newProductBuyBtn = document.createElement("div");
-		newProductBuyBtn.className="BuyBtn";
-		newProductBuyBtn.innerText = "Купить";
+	
 		//
 		//
 		//newProductBuyBtn.addEventListener("click") - сюда!!!

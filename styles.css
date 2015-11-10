@@ -120,20 +120,28 @@ body
 }
 .good_name
 {
-	//width:200px;
+	width:80px;
 	//height:40px;
- 
+  float:left;
 	color:#000000;
 	font-size:12pt;
+	margin-top:10px;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-weight:bold;
-	position: relative;
+	position: absolute;
 	display:inline;
 }
 .good_price
 {
-  position: relative;
-	//width:200px;
+  position: absolute;
+  float:left;
+	width:40px;
+	color:#F25F5C;
+	font-size:16pt;
+	margin-top:10px;
+	margin-left:140px;
+	font-family:Verdana;
+	font-weight:bold;
 	//height:30px;
 
 }
@@ -145,6 +153,31 @@ body
 {
 	position:relative;
 	margin:5px 33px;
+}
+
+
+.buybtn
+{
+ 	font-size:12pt;
+	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+font-weight:bold;
+  cursor:pointer;
+  position: absolute;
+  margin-top:160px;
+  //margin-left:60px;
+  padding-top:7px;
+   padding-left:20px;
+  opacity:0;
+  z-index:99;
+  background:#F25F5C;
+  width:200px;
+  height:35px;
+
+  color:black;
+}
+.buybtn:hover
+{
+  
 }
 /* GlassButton */
 .buttonBuy {
