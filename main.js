@@ -183,29 +183,30 @@ for(var i=0;i<200;i++)
 		var title=tea+" "+s1st+s2st+s3st;
 	}
 	var images = [
-		"http://s017.radikal.ru/i443/1510/bf/0c0f26da0574.jpg",
-		"http://s017.radikal.ru/i416/1510/81/3deca69a1630.jpg",
-		"http://s017.radikal.ru/i402/1510/cb/c98f4fdb1e0a.jpg",
-		"http://s017.radikal.ru/i427/1510/90/9130d4cbe465.jpg",
-		"http://s017.radikal.ru/i414/1510/16/adbb550264d8.jpg",
-		"http://s004.radikal.ru/i206/1510/36/825dbe1aacb7.jpg",
-		"http://i068.radikal.ru/1510/f8/b3e82cd21a08.jpg",
-		"http://s017.radikal.ru/i431/1510/9c/1c3a3ffeaea2.jpg",
-		"http://s020.radikal.ru/i716/1510/b5/2efd85dfecb8.jpg",
-		"http://s020.radikal.ru/i723/1510/f6/111f18c7b7be.jpg"
+		"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	];
 	var main_photo_id = getRandomInt(1,9);
 	Node.addChild1(6,new Product(title.toUpperCase(),200,200,[
 		images[main_photo_id],
-		"http://s017.radikal.ru/i416/1510/81/3deca69a1630.jpg",
-		"http://s017.radikal.ru/i402/1510/cb/c98f4fdb1e0a.jpg",
-		"http://s017.radikal.ru/i427/1510/90/9130d4cbe465.jpg",
-		"http://s017.radikal.ru/i414/1510/16/adbb550264d8.jpg",
-		"http://s004.radikal.ru/i206/1510/36/825dbe1aacb7.jpg",
-		"http://i068.radikal.ru/1510/f8/b3e82cd21a08.jpg",
-		"http://s017.radikal.ru/i431/1510/9c/1c3a3ffeaea2.jpg",
-		"http://s020.radikal.ru/i716/1510/b5/2efd85dfecb8.jpg",
-		"http://s020.radikal.ru/i723/1510/f6/111f18c7b7be.jpg"
+			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	]));
 }
 //Node.addChild1(2,new Product("помидорЪ дальневосточный",200,200,["http:\\3.com","http:\\4.com"]));
@@ -628,6 +629,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 	{
 		var newProductDiv=document.createElement("div");
 		newProductDiv.className="good_container";
+		
 		//заполняем карточку продукта.
 		//Название:
 		var newProductNameDiv=document.createElement("div");
@@ -639,10 +641,39 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		newProductPhotoDiv.className = "good_mainphoto";
 		newProductPhotoDiv.src = _Product_.images_urls[0];
 		newProductDiv.appendChild(newProductPhotoDiv);
+		
+		// NEW NEW NEW БЛОК С ОПИСАНИЕМ, ПОЯВЛЯЮЩИЙСЯ
+		var newProductDescriptionDiv = document.createElement("div");
+		newProductDescriptionDiv.className = "good_description";
+		newProductDescriptionDiv.id = _Product_.name+'animid';
+		
+		newProductDiv.addEventListener("mouseenter",function(event)
+                  {
+                    //hidewidgetcontent();
+                     //var animblock = document.getElementById(_Product_.name+'animid');
+                     console.log('Yes!');
+                     var a = TweenLite.to(newProductDescriptionDiv, 0.2 ,{opacity:1,borderRadius:'0px'});
+                  });
+                  
+			newProductDiv.addEventListener("mouseleave",function(event)
+                  {
+                    //hidewidgetcontent();
+                     //var animblock = document.getElementById(_Product_.name+'animid');
+                     console.log('Yes!');
+                     var a = TweenLite.to(newProductDescriptionDiv, 0.2,{opacity:0,borderRadius:'999px'});
+                  });
+                  
+                  
+		newProductDiv.appendChild(newProductDescriptionDiv);
 		//Цена:
 		var newProductPriceDiv = document.createElement("div");
 		newProductPriceDiv.className = "good_price";
 		newProductPriceDiv.innerText = _Product_.price;
+		
+		
+	
+		
+		
 		//newProductDiv.appendChild(newProductPriceDiv);
 		//leastDiv для кнопок +,- и инпута.
 		//var newProductLeastDiv = document.createElement("div");

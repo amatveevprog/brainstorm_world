@@ -95,10 +95,12 @@ body
 }
 .good_container
 {
+  position: relative;
+  z-index: 1;
   box-shadow: 1px 1px 1px #2e3939;
 	display:inline-block;
-	height:200px;
-	width:200px;
+	height:250px;
+	width:250px;
 	//border-radius:99px;
   background-color: rgba(238, 245, 219, 0.6);
 
@@ -106,22 +108,23 @@ body
 }
 .good_mainphoto
 {
-
-  border-radius:999px;
-	//height:190px;
-	//width:190px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 1px 1px 1px #2e3939;
+  //border-radius:999px;
+	height:250px;
+	width:250px;
 	margin-left:auto;
 	margin-right:auto;
-	display:inline-block;
-	height:90%;
-	width:90%;
+	//display:inline-block;
+
 
 }
 .good_name
 {
 	width:200px;
 	height:40px;
-
+ 
 	color:#000000;
 	font-size:12pt;
 	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
@@ -255,5 +258,17 @@ cursor:pointer;
   box-shadow: none;
 }
 
+.good_description
+{
+  position: relative;
+  opacity:0;
+  //border-radius:99px;
+  height:200px;
+	width:200px;
+	background:#FFFAF0;
+  margin-top:-203px;
+  z-index:20;
 
+
+}
 
