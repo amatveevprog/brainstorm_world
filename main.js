@@ -679,7 +679,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
                     // var a = TweenLite.to(newProductDescriptionDiv, 0.2 ,{opacity:1,borderRadius:'0px'});
-                    var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.9,height:'200px',marginTop:'-203px',onComplete:showbuybutton});
+                    var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:1,height:'253px',marginTop:'-255px',onComplete:showbuybutton});
                   });
                   
 			newProductDiv.addEventListener("mouseleave",function(event)
@@ -688,7 +688,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
                      //var animblock = document.getElementById(_Product_.name+'animid');
                      console.log('Yes!');
                      //var a = TweenLite.to(newProductDescriptionDiv, 0.2,{opacity:0,borderRadius:'999px'});
-                     var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.8,height:'70px', marginTop:'-73px',onComplete:hidebuybutton});
+                     var a = TweenLite.to(detailsDIV, 0.2 ,{opacity:0.9,height:'73px', marginTop:'-77px',onComplete:hidebuybutton});
                   });
                   
                   

@@ -9,14 +9,14 @@ body
 
 .content_container
 {
-  //background:rgba(255,255,255, 0.7);
-  background:#F25F5C;
+  //background:rgba(255,255,255,0.7);
+  background:rgb(0, 128, 128);
   width:80%;
 	color:#F7DEC5;
 	margin-top:40px;
 	margin-left:9%;
-
 }
+
 .productcontent_container
 {
 
@@ -26,6 +26,7 @@ body
 	margin:50px;
 	font-size:16pt;
 }
+
 .levelTitle
 {
 	font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -35,6 +36,7 @@ body
     padding-top: 0.6190em;
     padding-bottom: 0;
 }
+
 .shoppingcart_container
 {
 	//position:fixed;
@@ -44,6 +46,7 @@ body
  margin:0px 0px 0px 0px;
 
 }
+
 /* категории товаров */
 .category
 {
@@ -61,6 +64,7 @@ body
 	//font-size:16pt;
 	//cursor:pointer;
 }
+
 .category_container
 {
   margin: 0px auto;
@@ -69,6 +73,7 @@ body
 	font-size:16pt;
 	cursor:pointer;
 }
+
 .category_container_child
 {
 	display:inline-block;
@@ -78,6 +83,7 @@ body
 	color:black;
 	font-size:16pt;
 }
+
 .category_container_child:hover
 {
 	font-family:Helvetica, Arial, sans-serif;
@@ -87,37 +93,41 @@ body
 	font-size:16pt;
 	background:gray;
 }
+
 .category_container_child:active
 {
 	top: 1px;
 }
+
 .good_container
 {
   position: relative;
   z-index: 1;
   box-shadow: 1px 1px 1px #2e3939;
 	display:inline-block;
-	height:200px;
-	width:200px;
+	height:250px;
+	width:250px;
 	//border-radius:99px;
   background-color: rgba(238, 245, 219, 0.6);
 
 	margin:12px;
 }
+
 .good_mainphoto
 {
   position: relative;
   z-index: 1;
   box-shadow: 1px 1px 1px #2e3939;
   //border-radius:999px;
-	height:200px;
-	width:200px;
+	height:250px;
+	width:250px;
 	margin-left:auto;
 	margin-right:auto;
 	//display:inline-block;
 
 
 }
+
 .good_name
 {
 	width:80px;
@@ -131,6 +141,7 @@ body
 	position: absolute;
 	display:inline;
 }
+
 .good_price
 {
   position: absolute;
@@ -139,16 +150,18 @@ body
 	color:#F25F5C;
 	font-size:16pt;
 	margin-top:10px;
-	margin-left:140px;
+	margin-left:190px;
 	font-family:Verdana;
 	font-weight:bold;
 	//height:30px;
 
 }
+
 .inputQuantity
 {
 	width:3em;
 }
+
 .leastDiv
 {
 	position:relative;
@@ -158,27 +171,33 @@ body
 
 .buybtn
 {
- 	font-size:12pt;
-	font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-font-weight:bold;
+  text-align: center;
+  font-size:14pt;
+	font-family: Verdana, sans-serif;
+  font-weight:bold;
   cursor:pointer;
   position: absolute;
-  margin-top:160px;
+  margin-top:211px;
   //margin-left:60px;
   padding-top:7px;
-   padding-left:20px;
+  //padding-left:20px;
   opacity:0;
   z-index:99;
   background:#F25F5C;
-  width:200px;
+  width:250px;
   height:35px;
-
   color:black;
 }
+
 .buybtn:hover
 {
+  margin-top:200px;
+  background:rgb(0, 128, 128);
+  transition: .3s linear;
   
 }
+
+
 /* GlassButton */
 .buttonBuy {
 left:17%;
@@ -298,9 +317,9 @@ cursor:pointer;
   opacity:0;
   //border-radius:99px;
   height:200px;
-	width:200px;
+	width:250px;
 	background:#FFFAF0;
-  margin-top:-203px;
+  marginTop:-73px;
   z-index:20;
 
 }
@@ -310,7 +329,7 @@ cursor:pointer;
   position: relative;
   background:rgba(255,255,255, 0.7);
   z-index:21;
-  height:70px;
-	width:200px;
-	margin-top:-73px;
+  height:73px;
+	width:250px;
+	margin-top:-77px;
 }
