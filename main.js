@@ -304,6 +304,7 @@ TeaShopCatalogCreator.prototype.createCategoryBar = function (level,color)
 	CategoryContainer.className="category";
 	CategoryContainer.innerHTML="innerHTML";
 	CategoryContainer.innerText = "class: "+CategoryContainer.className;
+	CategoryContainer.id = 'CategoryTopContainer';
 	
 	CategoryContainer.appendChild(LEVEL);
 	CategoryContainer.appendChild(CATEGORY);
