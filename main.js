@@ -947,3 +947,17 @@ TeaShopCatalogCreator.prototype.RegisterEvents = function()
 //var content={node:Node};
 //var tc = new TeaShopCatalogCreator(content);
 //tc.createCategoryBar(1,"red");
+
+
+
+
+
+
+
+
+
+
+
+
+
+

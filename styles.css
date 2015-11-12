@@ -1,5 +1,6 @@
 body
 {
+  font-family: Helvetica;
   margin-top:0px;
   margin-left:0px;
   margin-right:0px;
@@ -14,22 +15,25 @@ body
   width:80%;
 	color:#F7DEC5;
 	margin-top:40px;
-	margin-left:9%;
+	margin-left:auto;
+	margin-right:auto;
+	//padding-left:20%;
+  //padding-right:20%;
 }
 
 .productcontent_container
 {
 
-	font-family:Helvetica, Arial, sans-serif;
-  padding-left:auto;
-  padding-right:auto;
-	margin:50px;
+	//font-family:Helvetica, Arial, sans-serif;
+  //padding-left:20%;
+  //padding-right:20%;
+	margin:15%;
 	font-size:16pt;
 }
 
 .levelTitle
 {
-	font-family: "Roboto Condensed", Helvetica, sans-serif;
+	//font-family: "Roboto Condensed", Helvetica, sans-serif;
     font-size: 42px;
     font-weight: 300;
     line-height: 1.2381em;
@@ -50,34 +54,37 @@ body
 /* категории товаров */
 .category
 {
+   z-index:999;
   
   //width:80%;
 	color:#F7DEC5;
 	//margin-left:9%;
 	//margin-right:11%;
   box-shadow: 2px 2px 1px #2e3939;
-
   background: white;
 	font-family:Helvetica, Arial, sans-serif;
-  box
+
 	//color:#fff;
 	//font-size:16pt;
 	//cursor:pointer;
+	 z-index:999;
 }
 
 .category_container
 {
+   z-index:999;
   margin: 0px auto;
 	font-family:Helvetica, Arial, sans-serif;
 	color:#fff;
 	font-size:16pt;
 	cursor:pointer;
+		z-index:101;
 }
 
 .category_container_child
 {
 	display:inline-block;
-	font-family:Helvetica, Arial, sans-serif;
+//	font-family:Helvetica, Arial, sans-serif;
 
 	margin:0px 50px 0px 0px;
 	color:black;
@@ -86,7 +93,7 @@ body
 
 .category_container_child:hover
 {
-	font-family:Helvetica, Arial, sans-serif;
+//	font-family:Helvetica, Arial, sans-serif;
 	border: 2px solid black;
 	margin:0px 50px 0px 0px;
 	color:#fff;
