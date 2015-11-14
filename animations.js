@@ -2,7 +2,7 @@
 var Selected_Catalog_String = 'Чай / Улуны';
   var category_container = document.getElementById('startpagediv');
   var category_container_short = document.getElementsByClassName("categoryshort")[0];
-  
+   var category = document.getElementsByClassName("category")[0];
 AddAnimationToCategory();
 
 function AddAnimationToCategory()
@@ -19,7 +19,9 @@ function AddAnimationToCategory()
                          return; 
                         }
                       //console.log('enetr');
-                      category_container.style.display = 'block';
+                      category.style.display = 'block';
+                      category.style.position = 'fixed';
+                      category.style.marginTop = '-60px';
                         //var tween = TweenLite.to(category_container, 0.2,{display:'block'});
                        
                         
@@ -35,7 +37,8 @@ function AddAnimationToCategory()
                          return; 
                         }
                    // var tween = TweenLite.to(category_container, 0.2,{display:'none'});
-                    category_container.style.display = 'none';
+                    category.style.display = 'none';
+                    category.style.position = 'relative';
                    
                   });
  }
@@ -55,7 +58,7 @@ window.onscroll = function()
   if(scrolled == 0)
    {
     var tween = TweenLite.to(category_container_short, 0.5,{height:'300px',marginTop:'-30px',width:'100%',opacity:1,background:'white',color:'black',position:'relative',onStart:animcart});
-    category_container.style.display = 'block';
+    category.style.display = 'block';
     function animcart()
     {
      var tween = TweenLite.to(cart, 0.7,{opacity:0});
@@ -65,7 +68,7 @@ window.onscroll = function()
    else
    {
      var tween = TweenLite.to(category_container_short, 0.5,{height:'40px',marginTop:'0px',position:'fixed',top:'0px',width:'100%',opacity:0.7, background:'black',color:'white', onStart:hidecart});
-     category_container.style.display = 'none';    
+     category.style.display = 'none';    
      category_container.innerHTML = '<p style = "color:white; margin-left:20px">'+Selected_Catalog_String+'<p>';
       function hidecart() 
     {
