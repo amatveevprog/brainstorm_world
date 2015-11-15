@@ -361,3 +361,11 @@ cursor:pointer;
   background:rgba(255,255,255, 0.7);
   z-index:999;
 }
+.categoryshort2
+{
+  width:100%;
+  background:rgba(0,0,0, 0.7);
+  z-index:1000;
+  color:white;
+  font-size:14pt;
+}
