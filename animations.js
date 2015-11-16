@@ -8,7 +8,7 @@ var Selected_Catalog_String = 'Чай / Улуны';
    
    var specialDivForScrolling = document.createElement("div");
    specialDivForScrolling.className = "categoryshort2";
-   specialDivForScrolling.innerText="1)Хлебные крошки 2)Хлебные крошки 3)Хлебные крошки";
+   specialDivForScrolling.innerHTML="<p id = 'bread' style = 'width:100%; margin:0px'>Хлебные крошки / Хлебные крошки / Хлебные крошки</p>";
    category_container_short.appendChild(specialDivForScrolling);
    specialDivForScrolling.style.display="none";
    
@@ -54,29 +54,52 @@ function AddAnimationToCategory()
 	{
 		//console.log("entered!!");
 		//show the derevo
+		
 		displaychildren(specialDivForScrolling);
 	});
 	specialDivForScrolling.addEventListener("mouseleave",function(event)
 	{
 		//hide the tree
+	
 		displayNONEchildren(specialDivForScrolling);
 		//console.log("leaved!!");
 	});
 	
-	
+	 
 	function displaychildren(ParentDiv)
 	{
-		for(var i=0;i<ParentDiv.children.length;i++)
+	 
+		//L = Math.round(L);
+
+   var bread = document.getElementById('bread');
+   var breadanimation = TweenLite.to(bread, 0.2,{opacity:0,height:0}); 
+   //bread.style.display = 'none';
+		for(var i=1;i<ParentDiv.children.length;i++)
 		{
-			ParentDiv.children[i].style.display="initial";
+		  ParentDiv.children[i].style.display="block";
+		  ParentDiv.children[i].style.background="black";
+		  var animation =  TweenLite.to(ParentDiv.children[i], 0.5,{opacity:1});
+		  
 		}
+		//var animation =  TweenLite.to(ParentDiv.children[i], 0.2,{height:'40px'});
+	
 	}
 	function displayNONEchildren(ParentDiv)
 	{
-		for(var i=0;i<ParentDiv.children.length;i++)
+	 // bread.style.opacity = 1;   v
+	 var bread = document.getElementById('bread');
+	  var breadanimation = TweenLite.to(bread, 0.2,{opacity:1,height:'100%'});  
+	  //bread.style.display = 'block';
+		for(var i=1;i<ParentDiv.children.length;i++)
 		{
-			ParentDiv.children[i].style.display="none";
+		  var animation =  TweenLite.to(ParentDiv.children[i], 0.5,{opacity:0,onComplete:hide});
+		  //var animation =  TweenLite.to(ParentDiv.children[i], 0.2,{height:'0px'});
+		  function hide()
+		  {
+		  	ParentDiv.children[i].style.display="none";
+		  }
 		}
+		//var animation =  TweenLite.to(category_container_short, 0.2,{height:'40px'});
 	}
  }
 
@@ -112,11 +135,16 @@ window.onscroll = function()
      var tween = TweenLite.to(cart, 0.7,{opacity:1});
     }
      //cart.style.marginTop = '0px';
-	
+
 	specialDivForScrolling.style.display="block";
-	specialDivForScrolling.style.height = "40px";
-	specialDivForScrolling.style.width = category_container_short.style.width;
+	specialDivForScrolling.style.height = "20px";
+	//specialDivForScrolling.style.background = "red";
+	//specialDivForScrolling.style.width = category_container_short.style.width;
+	specialDivForScrolling.style.width = '100%';
 	category.style.display="none";
 	specialDivForScrolling.appendChild(category); 
+		  category.style.opacity=0;
+		   category.style.background = black;
+
    }
  }

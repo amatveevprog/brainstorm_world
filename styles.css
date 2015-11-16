@@ -55,7 +55,7 @@ body
 /* категории товаров */
 .category
 {
-  background:rgba(0,0,0,0.7);
+  //background:rgba(0,0,0,0.7);
    z-index:999;
    //background:rgba(255,255,255, 0.7);
   //width:80%;
@@ -64,7 +64,8 @@ body
 	//margin-right:11%;
   box-shadow: 2px 2px 1px #2e3939;
   //background: white;
-  
+  //height:auto;
+  //padding:100px;
 	font-family:Helvetica, Arial, sans-serif;
 
 	//color:#fff;
@@ -88,7 +89,7 @@ body
 {
 	display:inline-block;
 //	font-family:Helvetica, Arial, sans-serif;
-  background:rgba(0,0,0,0.7);
+  //background:rgba(0,0,0,0.7);
 	margin:0px 50px 0px 0px;
 	color:white;
 	font-size:16pt;

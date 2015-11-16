@@ -251,7 +251,7 @@ function Shopping_Cart()
                             { 
                               try
                               {
-                               var a3 =  TweenLite.to(blocks[i], 0.3, {paddingBottom:'0px',paddingTop:'0px',background:'#EEF5DB',onStart:hidewidgetcontent,width:'0px', onComplete:hidecart});
+                               var a3 =  TweenLite.to(blocks[i], 0.3, {width:'0px',paddingBottom:'0px',paddingTop:'0px',background:'#EEF5DB',onStart:hidewidgetcontent, onComplete:hidecart});
                               }
                               //blocks[i].style.background= '#FFDC00';
                              // blocks[i].style.width = '0px';
