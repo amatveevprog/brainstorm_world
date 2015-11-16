@@ -130,6 +130,8 @@ Node.addChild1(0,new Product("гранатЪ",0,0,[]));
 Node.addChild1(0,new Product("автоматЪ",0,0,[]));
 Node.addChild1(0,new Product("пулеметЪ",0,0,[]));
 Node.addChild1(0,new Product("...Чай)",0,0,[]));
+Node.addChild(Node.children[5],new Product("улун",0,0,[]));
+Node.addChild(Node.children[5],new Product("пуэр",0,0,[]));
 Node.addChild(Node.children[0],new Product("огурец дальневосточный",0,0,[]));
 Node.addChild(Node.children[1],new Product("помидорЪ ближневосточный",0,0,[]));
 Node.addChild(Node.children[2],new Product("Граната Ф-1",0,0,[]));
@@ -195,7 +197,62 @@ for(var i=0;i<200;i++)
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	];
 	var main_photo_id = getRandomInt(1,9);
-	Node.addChild1(6,new Product(title.toUpperCase(),200,200,[
+	Node.addChild1(7,new Product(title.toUpperCase(),200,200,[
+		images[main_photo_id],
+			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
+	]));
+}
+for(var i=0;i<200;i++)
+{
+	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
+	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
+	var s3st = "";
+	var N = getRandomInt(0, 10);
+	for(var j = 0;j<N;j++)
+	{
+		s3st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+	}
+	if(getRandomInt(0, 1)==1)
+	{
+		var s4st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s4st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st+" "+addOn+" "+s4st+s3st+s2st+"ы";
+	}
+	else
+	{
+		var s5st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s5st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st;
+	}
+	var images = [
+		"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
+	];
+	var main_photo_id = getRandomInt(1,9);
+	Node.addChild1(8,new Product(title.toUpperCase(),200,200,[
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
 		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
