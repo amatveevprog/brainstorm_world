@@ -98,11 +98,11 @@ body
 .category_container_child:hover
 {
 //	font-family:Helvetica, Arial, sans-serif;
-	//border: 2px solid black;
-	//margin:0px 50px 0px 0px;
+	border: 2px solid black;
+	margin:0px 50px 0px 0px;
 	color:#fff;
 	font-size:16pt;
-	background:white;
+	background:gray;
 }
 
 .category_container_child:active
@@ -369,4 +369,50 @@ cursor:pointer;
   z-index:1000;
   color:white;
   font-size:14pt;
+}
+.tagclouditem1
+{
+	width: 220px;
+    height: 20px;
+    background-color: rgba(255, 0, 0, 0.72);
+    border-radius: 10px 10px 10px 10px;
+	margin:10px;
+	color:white;
+}
+.tagclouditem2
+{
+	width: 220px;
+    height: 20px;
+    background-color:rgba(0, 128, 0, 0.72);
+    border-radius: 10px 10px 10px 10px;
+	margin:10px;
+	color:white;
+}
+.tagclouditem3
+{
+	width: 220px;
+    height: 20px;
+    background-color: rgba(0, 0, 255, 0.72);
+	color:white;
+    border-radius: 10px 10px 10px 10px;
+	margin:10px;
+}
+.tagclouditem4
+{
+	width: 220px;
+    height: 20px;
+    background-color: rgba(123, 11, 255, 0.72);
+	color:white;
+    border-radius: 10px 10px 10px 10px;
+	margin:10px;
+}
+
+.tagclouditem5
+{
+	width: 220px;
+    height: 20px;
+    background-color: rgba(255, 180, 11, 0.72);
+	color:white;
+    border-radius: 10px 10px 10px 10px;
+	margin:10px;
 }
