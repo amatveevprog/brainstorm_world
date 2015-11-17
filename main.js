@@ -127,14 +127,14 @@ Product.prototype.listChildren = function()
 
 Node = Object.create(Product.prototype);
 Node = new Product(0,null,0,0,[]);
-Node.addChild1(0,new Product("огурец",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild1(0,new Product("помидорЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild1(0,new Product("гранатЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild1(0,new Product("автоматЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild1(0,new Product("пулеметЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild1(0,new Product("огурец",0,0,[]));
+Node.addChild1(0,new Product("помидорЪ",0,0,[]));
+Node.addChild1(0,new Product("гранатЪ",0,0,[]));
+Node.addChild1(0,new Product("автоматЪ",0,0,[]));
+Node.addChild1(0,new Product("пулеметЪ",0,0,[]));
 Node.addChild1(0,new Product("...Чай)",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild(Node.children[5],new Product("улун",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild(Node.children[5],new Product("пуэр",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild(Node.children[5],new Product("улун",0,0,[]));
+Node.addChild(Node.children[5],new Product("пуэр",0,0,[]));
 Node.addChild(Node.children[0],new Product("огурец дальневосточный",0,0,[]));
 Node.addChild(Node.children[1],new Product("помидорЪ ближневосточный",0,0,[]));
 Node.addChild(Node.children[2],new Product("Граната Ф-1",0,0,[]));
@@ -159,7 +159,7 @@ function getRandomInt(min, max)
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-for(var i=0;i<200;i++)
+for(var i=0;i<10;i++)
 {
 	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
 	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
@@ -201,16 +201,16 @@ for(var i=0;i<200;i++)
 	];
 	var main_photo_id = getRandomInt(1,9);
 	
-	var tags = [{Name:"1",Description:"Индийский"},
-	{Name:"2",Description:"Китайский"},
-	{Name:"3",Description:"Тапок"},
-	{Name:"4",Description:"очень вкусный"},
+	var tags = [{Name:"1",Description:"Улун"},
+	{Name:"2",Description:"Улун"},
+	{Name:"3",Description:"Улун"},
+	{Name:"4",Description:"Улун"},
 	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
-	{Name:"6",Description:"Тузик"},
-	{Name:"7",Description:"Прифкус носков"},
-	{Name:"8",Description:"Мурзик"},
-	{Name:"9",Description:"против блох"},
-	{Name:"10",Description:"Хабиб"}];
+	{Name:"6",Description:"Улун"},
+	{Name:"7",Description:"Улун"},
+	{Name:"8",Description:"Улун"},
+	{Name:"9",Description:"Улун"},
+	{Name:"10",Description:"Улун"}];
 	var M = getRandomInt(1,5);
 	var array1 = [];
 	for(var k=0;k<M;k++)
@@ -234,7 +234,7 @@ for(var i=0;i<200;i++)
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	],array1));
 }
-for(var i=0;i<200;i++)
+for(var i=0;i<5;i++)
 {
 	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
 	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
@@ -276,16 +276,16 @@ for(var i=0;i<200;i++)
 	];
 	var main_photo_id = getRandomInt(1,9);
 	
-	var tags = [{Name:"1",Description:"Индийский"},
-	{Name:"2",Description:"Китайский"},
-	{Name:"3",Description:"Тапок"},
-	{Name:"4",Description:"очень вкусный"},
-	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
-	{Name:"6",Description:"Тузик"},
-	{Name:"7",Description:"Козлик"},
-	{Name:"8",Description:"Мурзик"},
-	{Name:"9",Description:"против блох"},
-	{Name:"10",Description:"Хабиб"}];
+	var tags = [{Name:"1",Description:"Пуэр"},
+	{Name:"2",Description:"Пуэр"},
+	{Name:"3",Description:"Пуэр"},
+	{Name:"4",Description:"Пуэр"},
+	{Name:"5",Description:"Гурген Газенвагенович"},
+	{Name:"6",Description:"Пуэр"},
+	{Name:"7",Description:"Пуэр"},
+	{Name:"8",Description:"Пуэр"},
+	{Name:"9",Description:"Пуэр"},
+	{Name:"10",Description:"Пуэр"}];
 	var M = getRandomInt(1,5);
 	var array1 = [];
 	for(var k=0;k<M;k++)
@@ -299,7 +299,7 @@ for(var i=0;i<200;i++)
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
 		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
-		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leave  s.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
 		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
 		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
 		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
@@ -694,7 +694,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 } */
 
 
-//функция создания div'a уровня 
+//функция создания div'a уровня
 	TeaShopCatalogCreator.prototype.createLevelDiv = function(_level_,_parent_id_)
 	{
 		var leveldiv = document.createElement("div");
@@ -726,9 +726,8 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		if(_Node_.children[_chi_].icon!=null)
 		{
 			var icon = document.createElement("img");
-			icon.className = 'category_icon';
 			icon.src=_Node_.children[_chi_].icon;
-			//icon.style.width="32px";
+			icon.style.width="32px";
 			//icon.style.height = newCatDiv.style.height;
 			//icon.style.position="absolute";
 			//icon.style.top = "-3px";
@@ -742,7 +741,6 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//newCat.setAttribute("parent-id",_Node_.Id);
 		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
 		newCat.innerText = _Node_.children[_chi_].name;
-		newCat.className = 'category_text_div';
 		newCatDiv.appendChild(newCat);
 		
 		/* newCatDiv.className = "category_container_child";
@@ -1048,6 +1046,44 @@ TeaShopCatalogCreator.prototype.displayNoneNextLevels = function(level)
 		}
 	}
 }
+
+
+
+//отобразить всех детей данного уровня(листьев-потомков)
+TeaShopCatalogCreator.prototype.listAllChildren = function(Node,inputArray)
+{
+	/* if(Node.children.length==0)
+	{
+		//если детей нет, то добавляем текущий узел в конечные продукты
+		var PRODUCT = this.createProductDiv(Node);
+		return PRODUCT;
+	}
+	else
+	{
+		for(var i=0;i<Node.children.length;i++)
+		{
+			inputArray.push(this.listAllChildren(Node.children[i],inputArray));
+		}
+		return inputArray;
+	} */
+	if(Node.children.length==0)
+	{
+		//если детей нет, то добавляем текущий узел в конечные продукты
+		var PRODUCT = this.createProductDiv(Node);
+		inputArray.push(PRODUCT);
+		return inputArray;
+	}
+	else
+	{
+		for(var i=0;i<Node.children.length;i++)
+		{
+			this.listAllChildren(Node.children[i],inputArray);
+		}
+		return inputArray;
+	}
+}
+
+
 //отобразить детей на определенном уровне определенного предка(parent_id)
 TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 {
@@ -1069,7 +1105,23 @@ TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 	//удаление всех товаров, если были до нажатия на документе.
 	this.clearProductList();
 	var ParentNode = this.content.node.searchNode(parent_id,this.content.node,0).element;
-	for(var j=0;j<ParentNode.children.length;j++)
+	//вывести всех листьев-потомков данного узла
+	
+	
+	
+	
+	
+	if(level>1)
+	{
+		var resultArray = this.listAllChildren(ParentNode,[]);
+		var allproducts = document.getElementsByClassName("content_container");
+		for(var t=0;t<resultArray.length;t++)
+		{
+			allproducts[0].appendChild(resultArray[t]);
+		}
+	}
+	
+	/* for(var j=0;j<ParentNode.children.length;j++)
 	{
 		if(ParentNode.children[j].children.length==0)
 		{
@@ -1077,7 +1129,7 @@ TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 			var allproducts = document.getElementsByClassName("content_container");
 			allproducts[0].appendChild(PRODUCT); 
 		}
-	}
+	} */
 	//простановка обработчиков собитий!!!
 	for(var i=0;i<category_container_children.length;i++)
 	{
