@@ -127,14 +127,14 @@ Product.prototype.listChildren = function()
 
 Node = Object.create(Product.prototype);
 Node = new Product(0,null,0,0,[]);
-Node.addChild1(0,new Product("огурец",0,0,[]));
-Node.addChild1(0,new Product("помидорЪ",0,0,[]));
-Node.addChild1(0,new Product("гранатЪ",0,0,[]));
-Node.addChild1(0,new Product("автоматЪ",0,0,[]));
-Node.addChild1(0,new Product("пулеметЪ",0,0,[]));
+Node.addChild1(0,new Product("огурец",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild1(0,new Product("помидорЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild1(0,new Product("гранатЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild1(0,new Product("автоматЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild1(0,new Product("пулеметЪ",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
 Node.addChild1(0,new Product("...Чай)",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
-Node.addChild(Node.children[5],new Product("улун",0,0,[]));
-Node.addChild(Node.children[5],new Product("пуэр",0,0,[]));
+Node.addChild(Node.children[5],new Product("улун",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
+Node.addChild(Node.children[5],new Product("пуэр",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
 Node.addChild(Node.children[0],new Product("огурец дальневосточный",0,0,[]));
 Node.addChild(Node.children[1],new Product("помидорЪ ближневосточный",0,0,[]));
 Node.addChild(Node.children[2],new Product("Граната Ф-1",0,0,[]));
@@ -299,7 +299,7 @@ for(var i=0;i<200;i++)
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
 		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
-		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leave  s.jpg",
 		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
 		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
 		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
@@ -694,7 +694,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 } */
 
 
-//функция создания div'a уровня
+//функция создания div'a уровня 
 	TeaShopCatalogCreator.prototype.createLevelDiv = function(_level_,_parent_id_)
 	{
 		var leveldiv = document.createElement("div");
@@ -726,8 +726,9 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		if(_Node_.children[_chi_].icon!=null)
 		{
 			var icon = document.createElement("img");
+			icon.className = 'category_icon';
 			icon.src=_Node_.children[_chi_].icon;
-			icon.style.width="32px";
+			//icon.style.width="32px";
 			//icon.style.height = newCatDiv.style.height;
 			//icon.style.position="absolute";
 			//icon.style.top = "-3px";
@@ -741,6 +742,7 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//newCat.setAttribute("parent-id",_Node_.Id);
 		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
 		newCat.innerText = _Node_.children[_chi_].name;
+		newCat.className = 'category_text_div';
 		newCatDiv.appendChild(newCat);
 		
 		/* newCatDiv.className = "category_container_child";
