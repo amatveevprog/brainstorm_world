@@ -206,7 +206,7 @@ for(var i=0;i<10;i++)
 	{Name:"2",Description:"Улун"},
 	{Name:"3",Description:"Улун"},
 	{Name:"4",Description:"Улун"},
-	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
+	{Name:"5",Description:"Семен Геннадьевич"},
 	{Name:"6",Description:"Улун"},
 	{Name:"7",Description:"Улун"},
 	{Name:"8",Description:"Улун"},
