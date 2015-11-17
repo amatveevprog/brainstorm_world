@@ -234,7 +234,7 @@ for(var i=0;i<200;i++)
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	],array1));
 }
-for(var i=0;i<200;i++)
+for(var i=0;i<10;i++)
 {
 	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
 	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
@@ -276,16 +276,91 @@ for(var i=0;i<200;i++)
 	];
 	var main_photo_id = getRandomInt(1,9);
 	
-	var tags = [{Name:"1",Description:"Индийский"},
-	{Name:"2",Description:"Китайский"},
-	{Name:"3",Description:"Тапок"},
-	{Name:"4",Description:"очень вкусный"},
+	var tags = [{Name:"1",Description:"Улун"},
+	{Name:"2",Description:"Улун"},
+	{Name:"3",Description:"Улун"},
+	{Name:"4",Description:"Улун"},
 	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
-	{Name:"6",Description:"Тузик"},
-	{Name:"7",Description:"Козлик"},
-	{Name:"8",Description:"Мурзик"},
-	{Name:"9",Description:"против блох"},
-	{Name:"10",Description:"Хабиб"}];
+	{Name:"6",Description:"Улун"},
+	{Name:"7",Description:"Улун"},
+	{Name:"8",Description:"Улун"},
+	{Name:"9",Description:"Улун"},
+	{Name:"10",Description:"Улун"}];
+	var M = getRandomInt(1,5);
+	var array1 = [];
+	for(var k=0;k<M;k++)
+	{
+		var o=getRandomInt(0,9);
+		array1.push(tags[o]);
+		//console.log("aaa");
+	}
+	
+	Node.addChild1(7,new Product(title.toUpperCase(),200,200,[
+		images[main_photo_id],
+			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
+	],array1));
+}
+for(var i=0;i<5;i++)
+{
+	var s1st = soglass.charAt(getRandomInt(0,soglass.length-1));
+	var s2st = glass.charAt(getRandomInt(0,glass.length-1));
+	var s3st = "";
+	var N = getRandomInt(0, 10);
+	for(var j = 0;j<N;j++)
+	{
+		s3st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+	}
+	if(getRandomInt(0, 1)==1)
+	{
+		var s4st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s4st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st+" "+addOn+" "+s4st+s3st+s2st+"ы";
+	}
+	else
+	{
+		var s5st = "";
+		for(var j = 0;j<N;j++)
+		{
+			s5st+=alphabet.charAt(getRandomInt(0,alphabet.length-1));
+		}
+		var title=tea+" "+s1st+s2st+s3st;
+	}
+	var images = [
+		"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
+		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
+		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
+		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
+		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
+		"http://img.cliparto.com/pic/xl/192936/3292888-black-tea-leaves.jpg",
+		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
+		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
+		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
+	];
+	var main_photo_id = getRandomInt(1,9);
+	
+	var tags = [{Name:"1",Description:"Пуэр"},
+	{Name:"2",Description:"Пуэр"},
+	{Name:"3",Description:"Пуэр"},
+	{Name:"4",Description:"Пуэр"},
+	{Name:"5",Description:"Гурген Газенвагенович"},
+	{Name:"6",Description:"Пуэр"},
+	{Name:"7",Description:"Пуэр"},
+	{Name:"8",Description:"Пуэр"},
+	{Name:"9",Description:"Пуэр"},
+	{Name:"10",Description:"Пуэр"}];
 	var M = getRandomInt(1,5);
 	var array1 = [];
 	for(var k=0;k<M;k++)
@@ -299,7 +374,7 @@ for(var i=0;i<200;i++)
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
 		"https://www.colourbox.com/preview/1966840-black-tea-loose-dried-tea-leaves-marco.jpg",
-		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leave  s.jpg",
+		"http://tr.stockfresh.com/files/p/pzaxe/m/59/2034622_stock-photo-dry-black-tea-leaves.jpg",
 		"http://s.pfst.net/2011.03/556653818609c3cda708f537d889f55c9f6d14c641_b.jpg",
 		"https://im0-tub-ru.yandex.net/i?id=2a0ee548ef459a5033cfdbbacf989864&n=33&h=190&w=268",
 		"http://s.pfst.net/2010.02/76685230279ddba891dba174ac2e77b0979132a11_b.jpg",
@@ -1048,6 +1123,40 @@ TeaShopCatalogCreator.prototype.displayNoneNextLevels = function(level)
 		}
 	}
 }
+//отобразить всех детей данного уровня(листьев-потомков)
+TeaShopCatalogCreator.prototype.listAllChildren = function(Node,inputArray)
+{
+	/* if(Node.children.length==0)
+	{
+		//если детей нет, то добавляем текущий узел в конечные продукты
+		var PRODUCT = this.createProductDiv(Node);
+		return PRODUCT;
+	}
+	else
+	{
+		for(var i=0;i<Node.children.length;i++)
+		{
+			inputArray.push(this.listAllChildren(Node.children[i],inputArray));
+		}
+		return inputArray;
+	} */
+	if(Node.children.length==0)
+	{
+		//если детей нет, то добавляем текущий узел в конечные продукты
+		var PRODUCT = this.createProductDiv(Node);
+		inputArray.push(PRODUCT);
+		return inputArray;
+	}
+	else
+	{
+		for(var i=0;i<Node.children.length;i++)
+		{
+			this.listAllChildren(Node.children[i],inputArray);
+		}
+		return inputArray;
+	}
+}
+
 //отобразить детей на определенном уровне определенного предка(parent_id)
 TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 {
@@ -1069,13 +1178,13 @@ TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 	//удаление всех товаров, если были до нажатия на документе.
 	this.clearProductList();
 	var ParentNode = this.content.node.searchNode(parent_id,this.content.node,0).element;
-	for(var j=0;j<ParentNode.children.length;j++)
+	if(level>1)
 	{
-		if(ParentNode.children[j].children.length==0)
+		var resultArray = this.listAllChildren(ParentNode,[]);
+		var allproducts = document.getElementsByClassName("content_container");
+		for(var t=0;t<resultArray.length;t++)
 		{
-			var PRODUCT = this.createProductDiv(ParentNode.children[j]);
-			var allproducts = document.getElementsByClassName("content_container");
-			allproducts[0].appendChild(PRODUCT); 
+			allproducts[0].appendChild(resultArray[t]);
 		}
 	}
 	//простановка обработчиков собитий!!!
