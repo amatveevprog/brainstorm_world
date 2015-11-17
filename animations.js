@@ -144,7 +144,7 @@ window.onscroll = function()
 	category.style.display="none";
 	specialDivForScrolling.appendChild(category); 
 		  category.style.opacity=0;
-		   category.style.background = black;
+		   category.style.background = 'black';
 
    }
  }

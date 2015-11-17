@@ -98,11 +98,11 @@ body
 .category_container_child:hover
 {
 //	font-family:Helvetica, Arial, sans-serif;
-	border: 2px solid black;
-	margin:0px 50px 0px 0px;
+	//border: 2px solid black;
+	//margin:0px 50px 0px 0px;
 	color:#fff;
 	font-size:16pt;
-	background:gray;
+	background:white;
 }
 
 .category_container_child:active

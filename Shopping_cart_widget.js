@@ -4,7 +4,7 @@
 
 
 
-
+ var state = 'collapsed';
 
 
 
@@ -38,18 +38,33 @@ function cartinit()
 function showwidgetcontent()
  {
     var blocks = document.getElementsByClassName('cartelemdivright');
+    console.log(state);
+     if (state != 'expanding')
+         {
+           
+            console.log('cancel');
+            return('false!');
+            
+         }
+         
+    console.log('SHOWING!!!');
+  
+   
     for (var i in blocks)
       {       
         try
         {
-          var tween = TweenLite.to(blocks[i], 0.5,{opacity:1, display:'inline'});
+         //var tween = TweenLite.to(blocks[i], 0.5,{opacity:1});
+          blocks[i].style.display= 'inline';
+          state = 'collapsed';
         }
             catch(e)
         {
-          console.log(e);
+          //console.log(e);
         }
           //blocks[i].style.display = 'inline';
       }
+      
  }
 
 function hidewidgetcontent()
@@ -60,12 +75,13 @@ function hidewidgetcontent()
       {   
         try
         {
-          var tween = TweenLite.to(blocks[i], 0.2,{opacity:0,display:'none'});
+         // var tween = TweenLite.to(blocks[i], 0.2,{opacity:0});
+           blocks[i].style.display= 'none';
           //blocks[i].style.display= 'none';
         }
         catch(e)
         {
-          console.log(e);
+          //console.log(e);
         }
       }
  }
@@ -84,7 +100,7 @@ function Shopping_Cart()
   var imagesrc = 'https://cdn.shopify.com/s/files/1/0363/2857/t/68/assets/shopping_bag.png?1380437768496362973';
   var teaimagesrc = 'https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png';
   var goods = [];
-  
+ 
   
   
   //DELETEITEM
@@ -199,7 +215,8 @@ function Shopping_Cart()
             cart.addEventListener("mouseenter",function(event)
                   {
                     //hidewidgetcontent();
-                    
+                    console.log('expanding....');
+                    state ='expanding';
                      var a = TweenLite.to(cart, 1.5,{width:'213px', paddingLeft:'7px',boxShadow: '0 0 4px rgba(0,0,0,0.2)',onStart:showdiv, onComplete:showwidgetcontent});
                      
                      
@@ -238,6 +255,7 @@ function Shopping_Cart()
                   
             cart.addEventListener("mouseleave",function(event)
                   {
+                     state = 'collapsing';
                      var a2 =  TweenLite.to(cart_icon, 0.5 , {transform:'rotate(0deg)',onStart:hideelems});
                     
                 
