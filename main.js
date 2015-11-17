@@ -4,7 +4,8 @@
 //price - цена 
 //quantity - количество на складе 
 //images_urls - ссылки на изображения(например, с радикала), МАССИВ СТРОК!
-function Product(/*id,parent_id,*/name,price,quantity,images_urls)
+//- массив тегов[{Name_of_tag:val1,Description:val2},{Name_of_tag:val1,Description:val2} ...]
+function Product(/*id,parent_id,*/name,price,quantity,images_urls,tags_array,icon_url)
 {
 	this.Id = 0;
 	//this.parentId=parent_id;
@@ -14,7 +15,9 @@ function Product(/*id,parent_id,*/name,price,quantity,images_urls)
 	this.images_urls=images_urls;
 	this.children=[];
 	this.level=0;
-	
+	//облако тегов...
+	this.tagArray=tags_array;
+	this.icon = icon_url;
 }
 var glblId = 
 {
@@ -129,7 +132,7 @@ Node.addChild1(0,new Product("помидорЪ",0,0,[]));
 Node.addChild1(0,new Product("гранатЪ",0,0,[]));
 Node.addChild1(0,new Product("автоматЪ",0,0,[]));
 Node.addChild1(0,new Product("пулеметЪ",0,0,[]));
-Node.addChild1(0,new Product("...Чай)",0,0,[]));
+Node.addChild1(0,new Product("...Чай)",0,0,[],[],"https://cdn1.iconfinder.com/data/icons/hotel-and-restaurant-volume-1/48/005-256.png"));
 Node.addChild(Node.children[5],new Product("улун",0,0,[]));
 Node.addChild(Node.children[5],new Product("пуэр",0,0,[]));
 Node.addChild(Node.children[0],new Product("огурец дальневосточный",0,0,[]));
@@ -197,6 +200,26 @@ for(var i=0;i<200;i++)
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	];
 	var main_photo_id = getRandomInt(1,9);
+	
+	var tags = [{Name:"1",Description:"Индийский"},
+	{Name:"2",Description:"Китайский"},
+	{Name:"3",Description:"Тапок"},
+	{Name:"4",Description:"очень вкусный"},
+	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
+	{Name:"6",Description:"Тузик"},
+	{Name:"7",Description:"Прифкус носков"},
+	{Name:"8",Description:"Мурзик"},
+	{Name:"9",Description:"против блох"},
+	{Name:"10",Description:"Хабиб"}];
+	var M = getRandomInt(1,5);
+	var array1 = [];
+	for(var k=0;k<M;k++)
+	{
+		var o=getRandomInt(0,9);
+		array1.push(tags[o]);
+		//console.log("aaa");
+	}
+	
 	Node.addChild1(7,new Product(title.toUpperCase(),200,200,[
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
@@ -209,7 +232,7 @@ for(var i=0;i<200;i++)
 		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
 		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
-	]));
+	],array1));
 }
 for(var i=0;i<200;i++)
 {
@@ -252,6 +275,26 @@ for(var i=0;i<200;i++)
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
 	];
 	var main_photo_id = getRandomInt(1,9);
+	
+	var tags = [{Name:"1",Description:"Индийский"},
+	{Name:"2",Description:"Китайский"},
+	{Name:"3",Description:"Тапок"},
+	{Name:"4",Description:"очень вкусный"},
+	{Name:"5",Description:"Семен Геннадьевич, БОМЖ"},
+	{Name:"6",Description:"Тузик"},
+	{Name:"7",Description:"Козлик"},
+	{Name:"8",Description:"Мурзик"},
+	{Name:"9",Description:"против блох"},
+	{Name:"10",Description:"Хабиб"}];
+	var M = getRandomInt(1,5);
+	var array1 = [];
+	for(var k=0;k<M;k++)
+	{
+		var o=getRandomInt(0,9);
+		array1.push(tags[o]);
+		//console.log("aaa");
+	}
+	
 	Node.addChild1(8,new Product(title.toUpperCase(),200,200,[
 		images[main_photo_id],
 			"https://im1-tub-ru.yandex.net/i?id=4ec6c8d95a8041676fa24a42071544c9&n=33&h=190&w=284",
@@ -264,7 +307,8 @@ for(var i=0;i<200;i++)
 		"https://im2-tub-ru.yandex.net/i?id=961ef99a6fdfdb9117ac251484a6151f&n=33&h=190&w=284",
 		"https://im2-tub-ru.yandex.net/i?id=c0a21c4bf9318de5c213cdbd9ad5153a&n=33&h=190&w=283",
 		"https://im0-tub-ru.yandex.net/i?id=9d0c09f1cea7cdf148555e183c93130b&n=33&h=190&w=285"
-	]));
+	],array1));
+	
 }
 //Node.addChild1(2,new Product("помидорЪ дальневосточный",200,200,["http:\\3.com","http:\\4.com"]));
 //Node.addChild1(1,new Product("огурец ближневосточный",250,250,["http:\\1.com","http:\\2.com"]));
@@ -678,13 +722,79 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		newCatDiv.setAttribute("category-level",_level_);
 		newCatDiv.setAttribute("product-id",_Node_.children[_chi_].Id);
 		newCatDiv.setAttribute("parent-id",_Node_.Id);
+		//newCatDiv.style.display="inline-block";
+		if(_Node_.children[_chi_].icon!=null)
+		{
+			var icon = document.createElement("img");
+			icon.src=_Node_.children[_chi_].icon;
+			icon.style.width="32px";
+			//icon.style.height = newCatDiv.style.height;
+			//icon.style.position="absolute";
+			//icon.style.top = "-3px";
+			//icon.style.margin = "-35px";
+			newCatDiv.appendChild(icon);
+		}
+		var newCat = document.createElement("div");
+		//newCat.className = "category_container_child";
+		//newCat.setAttribute("category-level",_level_);
+		//newCat.setAttribute("product-id",_Node_.children[_chi_].Id);
+		//newCat.setAttribute("parent-id",_Node_.Id);
 		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
-		newCatDiv.innerText = _Node_.children[_chi_].name;
+		newCat.innerText = _Node_.children[_chi_].name;
+		newCatDiv.appendChild(newCat);
+		
+		/* newCatDiv.className = "category_container_child";
+		newCatDiv.setAttribute("category-level",_level_);
+		newCatDiv.setAttribute("product-id",_Node_.children[_chi_].Id);
+		newCatDiv.setAttribute("parent-id",_Node_.Id);
+		//console.log("catDiv: "+newCatDiv.getAttribute("product-id"));
+		newCatDiv.innerText = _Node_.children[_chi_].name; */
+		/* if(_Node_.children[_chi_].icon!=null)
+		{
+			var icon = document.createElement("img");
+			icon.src=_Node_.children[_chi_].icon;
+			icon.style.width="32px";
+			//icon.style.height = newCatDiv.style.height;
+			icon.style.position="absolute";
+			//icon.style.top = "-3px";
+			//icon.style.margin = "-35px";
+			newCatDiv.appendChild(icon);
+		} */
+		
+		
 		return newCatDiv;
 	};
 	//функция создания div'а-карточки товара конечного продукта
 	TeaShopCatalogCreator.prototype.createProductDiv = function(_Product_)
 	{
+		//создание массива DOM-элементов-тегов продукта.
+		function createTagCloud(classArray)
+		{
+			var CLArray=[];
+			//cloudArray - массив в формате [{TagName:имя_тега,Description:описание_тега,Tag_className:имя_css-класса_тега},..]
+			var curTOP;
+			for(var l=0;l<_Product_.tagArray.length;l++)
+			{
+				var tag = document.createElement("div");
+				var randomClassID = getRandomInt(0,classArray.length-1);
+				tag.className = classArray[randomClassID];
+				tag.innerText = _Product_.tagArray[l].Description;
+				tag.style.position = "absolute";
+				if(l==0)
+				{
+					tag.style.top=100+"px";
+					curTOP = 100;
+				}
+				else
+				{
+					curTOP+=20;
+					tag.style.top = curTOP+"px"; 
+				}
+				CLArray.push(tag);
+			}
+			return CLArray;
+		}
+		
 			var newProductDiv=document.createElement("div");
 		newProductDiv.className="good_container";
 		
@@ -792,8 +902,15 @@ TeaShopCatalogCreator.prototype.clearCategoryList = function(atLevel)
 		//
 		//
 		//newProductDiv.appendChild(newProductBuyBtn);	
-		
-	
+		if(_Product_.tagArray!=null)
+		{
+			var ArrayP = createTagCloud(["tagclouditem1","tagclouditem2","tagclouditem3","tagclouditem4","tagclouditem5"]);
+			for(var p=0;p<ArrayP.length;p++)
+			{
+				//сдвигаем первый элемент
+				detailsDIV.appendChild(ArrayP[p]);
+			}
+		}
 		//возвращаем карточку товара
 		return newProductDiv;
 	}
@@ -817,6 +934,17 @@ TeaShopCatalogCreator.prototype.outPutAllTree = function()
 	for(var i=0;i<this.content.node.children.length;i++)
 	{
 		var ChildDiv = this.createCategoryChildDiv(this.content.node,i,1);
+/* 		if(this.content.node.children[i].icon!=null)
+		{
+			var icon = document.createElement("img");
+			icon.src=this.content.node.children[i].icon;
+			icon.style.width="32px";
+			//icon.style.height = newCatDiv.style.height;
+			icon.style.position="absolute";
+			//icon.style.top = "-3px";
+			//icon.style.margin = "-35px";
+			firstLevelDiv.appendChild(icon);
+		} */
 		firstLevelDiv.appendChild(ChildDiv);
 		this.outputNextLevel(this.content.node.children[i].Id,this.content.node.children[i].level+1);
 	}
@@ -862,6 +990,19 @@ TeaShopCatalogCreator.prototype.outputNextLevel = function(parent_id,level)
 			if(Node.children[chi].children.length!=0)
 			{
 				//создаем div для дочернего элемента
+				
+				if(Node.children[chi].icon!=null)
+				{
+					var icon = document.createElement("img");
+					icon.src=Node.children[chi].icon;
+					icon.style.width="32px";
+					//icon.style.height = newCatDiv.style.height;
+					icon.style.position="absolute";
+					//icon.style.top = "-3px";
+					//icon.style.margin = "-35px";
+					CATEGORY.appendChild(icon);
+				}
+				
 				var CHILD = this.createCategoryChildDiv(Node,chi,level);
 				CATEGORY.appendChild(CHILD);
 				this.outputNextLevel(Node.children[chi].Id,level+1);
@@ -951,7 +1092,25 @@ TeaShopCatalogCreator.prototype.displayOnLevel = function(level,parent_id)
 				category_container_children[i].addEventListener("click",function(event)
 				{
 					event.stopPropagation(childProduct);
-					this_ref.displayOnLevel(level+1,event.target.getAttribute("product-id"));
+					var TARGET;
+					if(event.target.className!=category_container_children[0].className)
+					{
+						var cur = event.target.parentNode;
+						while (cur.className!=category_container_children[0].className)
+						{
+							if(cur.parentNode==null)
+							{
+								throw new Error("Вышли за пределы документа!!!");
+							}
+							cur = cur.parentNode;
+						}
+						TARGET=cur;
+					}
+					else
+					{
+						TARGET=event.target;
+					}
+					this_ref.displayOnLevel(level+1,TARGET.getAttribute("product-id"));
 				});
 				
 			}
